@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,89 +7,83 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 253 245 243; /* Warm cream background */
+    --foreground: 61 80 61; /* Deep sage for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 61 80 61;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 61 80 61;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 157 23 77; /* Deep rose */
+    --primary-foreground: 253 245 243;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 199 210 199; /* Light sage */
+    --secondary-foreground: 61 80 61;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 246 247 246; /* Very light sage */
+    --muted-foreground: 122 150 122;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 252 231 243; /* Light rose */
+    --accent-foreground: 157 23 77;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 227 232 227; /* Light sage border */
+    --input: 227 232 227;
+    --ring: 157 23 77;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 61 80 61;
+    --sidebar-primary: 157 23 77;
+    --sidebar-primary-foreground: 253 245 243;
+    --sidebar-accent: 246 247 246;
+    --sidebar-accent-foreground: 61 80 61;
+    --sidebar-border: 227 232 227;
+    --sidebar-ring: 157 23 77;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 43 55 43;
+    --foreground: 246 247 246;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 43 55 43;
+    --card-foreground: 246 247 246;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 43 55 43;
+    --popover-foreground: 246 247 246;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 252 231 243;
+    --primary-foreground: 157 23 77;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 61 80 61;
+    --secondary-foreground: 246 247 246;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 61 80 61;
+    --muted-foreground: 163 181 163;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 61 80 61;
+    --accent-foreground: 246 247 246;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 127 29 29;
+    --destructive-foreground: 248 250 252;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 61 80 61;
+    --input: 61 80 61;
+    --ring: 252 231 243;
+
+    --sidebar-background: 43 55 43;
+    --sidebar-foreground: 246 247 246;
+    --sidebar-primary: 252 231 243;
+    --sidebar-primary-foreground: 157 23 77;
+    --sidebar-accent: 61 80 61;
+    --sidebar-accent-foreground: 246 247 246;
+    --sidebar-border: 61 80 61;
+    --sidebar-ring: 252 231 243;
   }
 }
 
@@ -98,6 +93,18 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .floral-pattern {
+    background-image: radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(122, 150, 122, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 80%, rgba(252, 231, 243, 0.1) 0%, transparent 50%);
   }
 }
