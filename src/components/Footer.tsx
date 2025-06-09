@@ -76,13 +76,13 @@ const Footer = () => {
             </div>
             <div className="space-y-2">
               <p className="text-sm text-sage-300">Subscribe to our newsletter</p>
-              <div className="flex">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input 
                   type="email" 
                   placeholder="Your email"
-                  className="flex-1 px-3 py-2 text-sm bg-sage-700 border border-sage-600 rounded-l-lg focus:outline-none focus:border-rose-500"
+                  className="flex-1 px-3 py-2 text-sm bg-sage-700 border border-sage-600 rounded-lg focus:outline-none focus:border-rose-500 min-w-0"
                 />
-                <button className="px-4 py-2 bg-rose-600 text-white text-sm rounded-r-lg hover:bg-rose-700 transition-colors">
+                <button className="px-4 py-2 bg-rose-600 text-white text-sm rounded-lg hover:bg-rose-700 transition-colors whitespace-nowrap">
                   Subscribe
                 </button>
               </div>

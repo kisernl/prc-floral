@@ -42,10 +42,10 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList className="space-x-6">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
                     Who We Are
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="absolute left-1/2 transform -translate-x-1/2">
                     <div className="w-64 p-4">
                       <Link to="/about" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
                         About Us
@@ -64,10 +64,10 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
                     What We Do
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="absolute left-1/2 transform -translate-x-1/2">
                     <div className="w-64 p-4">
                       <Link to="/services" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
                         Our Services
@@ -80,10 +80,10 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
                     Connect With Us
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="absolute left-1/2 transform -translate-x-1/2">
                     <div className="w-64 p-4">
                       <Link to="/contact" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
                         Contact
@@ -111,42 +111,42 @@ const Header = () => {
           <div className="md:hidden">
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                <Button variant="ghost" size="icon" className="h-12 w-12 text-sage-800 hover:bg-sage-100">
+                  <Menu className="h-8 w-8" />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent>
-                <DrawerHeader>
-                  <DrawerTitle>Navigation</DrawerTitle>
+              <DrawerContent className="bg-sage-800 text-sage-100 border-t-sage-700">
+                <DrawerHeader className="border-b border-sage-700">
+                  <DrawerTitle className="text-sage-100">Navigation</DrawerTitle>
                   <DrawerClose asChild>
-                    <Button variant="ghost" size="icon" className="absolute right-4 top-4">
+                    <Button variant="ghost" size="icon" className="absolute right-4 top-4 text-sage-100 hover:bg-sage-700">
                       <X className="h-4 w-4" />
                     </Button>
                   </DrawerClose>
                 </DrawerHeader>
                 <div className="p-4 space-y-4">
                   <div>
-                    <h3 className="font-semibold text-sage-700 mb-2">Who We Are</h3>
+                    <h3 className="font-semibold text-sage-100 mb-2">Who We Are</h3>
                     <div className="pl-4 space-y-2">
-                      <Link to="/about" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">About Us</Link>
-                      <Link to="/about/team" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Team</Link>
-                      <Link to="/about/story" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Story</Link>
-                      <Link to="/about/impact" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Impact</Link>
+                      <Link to="/about" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">About Us</Link>
+                      <Link to="/about/team" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Our Team</Link>
+                      <Link to="/about/story" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Our Story</Link>
+                      <Link to="/about/impact" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Our Impact</Link>
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sage-700 mb-2">What We Do</h3>
+                    <h3 className="font-semibold text-sage-100 mb-2">What We Do</h3>
                     <div className="pl-4 space-y-2">
-                      <Link to="/services" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Services</Link>
-                      <Link to="/stories" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Stories</Link>
+                      <Link to="/services" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Our Services</Link>
+                      <Link to="/stories" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Stories</Link>
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sage-700 mb-2">Connect With Us</h3>
+                    <h3 className="font-semibold text-sage-100 mb-2">Connect With Us</h3>
                     <div className="pl-4 space-y-2">
-                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Contact</Link>
-                      <Link to="/events" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Events</Link>
-                      <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Volunteer</Link>
+                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Contact</Link>
+                      <Link to="/events" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Events</Link>
+                      <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block text-sage-300 hover:text-rose-400">Volunteer</Link>
                     </div>
                   </div>
                   <Link to="/donate" onClick={() => setIsOpen(false)}>
