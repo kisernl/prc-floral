@@ -2,6 +2,7 @@
 import React from 'react';
 import { Heart, Users, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -20,18 +21,22 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 text-lg">
-                <Gift className="mr-2 h-5 w-5" />
-                Make a Donation
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-sage-400 text-sage-700 hover:bg-sage-50 px-8 py-3 text-lg"
-              >
-                <Users className="mr-2 h-5 w-5" />
-                Get Support
-              </Button>
+              <Link to="/donate">
+                <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 text-lg">
+                  <Gift className="mr-2 h-5 w-5" />
+                  Make a Donation
+                </Button>
+              </Link>
+              <Link to="/welcome">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-sage-400 text-sage-700 hover:bg-sage-50 px-8 py-3 text-lg"
+                >
+                  <Users className="mr-2 h-5 w-5" />
+                  Learn More
+                </Button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-3 gap-6 pt-8">

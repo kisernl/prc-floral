@@ -80,21 +80,22 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/events" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
-                    Events
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/volunteer" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
-                    Volunteer
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/contact" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
-                    Contact
-                  </Link>
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
+                    Connect With Us
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-64 p-4">
+                      <Link to="/contact" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Contact
+                      </Link>
+                      <Link to="/events" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Events
+                      </Link>
+                      <Link to="/volunteer" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Volunteer
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -140,9 +141,14 @@ const Header = () => {
                       <Link to="/stories" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Stories</Link>
                     </div>
                   </div>
-                  <Link to="/events" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Events</Link>
-                  <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Volunteer</Link>
-                  <Link to="/contact" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Contact</Link>
+                  <div>
+                    <h3 className="font-semibold text-sage-700 mb-2">Connect With Us</h3>
+                    <div className="pl-4 space-y-2">
+                      <Link to="/contact" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Contact</Link>
+                      <Link to="/events" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Events</Link>
+                      <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Volunteer</Link>
+                    </div>
+                  </div>
                   <Link to="/donate" onClick={() => setIsOpen(false)}>
                     <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white">
                       Donate Now

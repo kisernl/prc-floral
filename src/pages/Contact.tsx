@@ -24,10 +24,11 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Details */}
-              <div>
-                <h2 className="text-3xl font-bold text-sage-800 mb-8">Get in Touch</h2>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Get in Touch</h2>
+              
+              <div className="grid md:grid-cols-2 gap-12 mb-12">
+                {/* Contact Details */}
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <Phone className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
@@ -69,81 +70,38 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Contact Form */}
-              <div className="bg-sage-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold text-sage-800 mb-6">Send Us a Message</h3>
-                <form className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sage-700 font-medium mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                      required
-                    />
+                {/* Quick Contact Actions */}
+                <div className="bg-sage-50 p-8 rounded-lg">
+                  <h3 className="text-2xl font-bold text-sage-800 mb-6">Connect With Us Today</h3>
+                  <p className="text-sage-600 mb-8 leading-relaxed">
+                    Ready to reach out? Choose the method that's most comfortable for you. 
+                    We're here to listen and support you with compassion and confidentiality.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <a href="tel:+15551234567">
+                      <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-4 text-lg">
+                        <Phone className="mr-3 h-5 w-5" />
+                        Call Us Now: (555) 123-4567
+                      </Button>
+                    </a>
+                    
+                    <a href="mailto:info@hopepregnancycenter.org?subject=Support%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0AThank%20you">
+                      <Button variant="outline" className="w-full border-sage-300 text-sage-700 hover:bg-sage-100 py-4 text-lg">
+                        <Mail className="mr-3 h-5 w-5" />
+                        Send Us an Email
+                      </Button>
+                    </a>
                   </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sage-700 font-medium mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                      required
-                    />
+                  
+                  <div className="mt-8 p-4 bg-white rounded-lg border border-sage-200">
+                    <p className="text-sm text-sage-600 text-center">
+                      <strong>Confidential & Free:</strong> All our services are completely confidential 
+                      and provided at no cost to you.
+                    </p>
                   </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sage-700 font-medium mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sage-700 font-medium mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                      required
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="appointment">Schedule Appointment</option>
-                      <option value="services">Questions About Services</option>
-                      <option value="volunteer">Volunteer Opportunities</option>
-                      <option value="donation">Donation Information</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sage-700 font-medium mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <Button type="submit" className="w-full bg-rose-600 hover:bg-rose-700 text-white py-3">
-                    Send Message
-                  </Button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -160,9 +118,11 @@ const Contact = () => {
                 Our 24/7 helpline is staffed by trained counselors ready to provide support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
-                  Call (555) 123-4567
-                </Button>
+                <a href="tel:+15551234567">
+                  <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
+                    Call (555) 123-4567
+                  </Button>
+                </a>
                 <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3">
                   Walk-In Welcome
                 </Button>
