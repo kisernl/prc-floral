@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Phone, Mail, ChevronDown } from 'lucide-react';
+import { Heart, ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -10,28 +10,21 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-sage-200 sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        {/* Top contact bar */}
-        <div className="flex justify-between items-center py-2 text-sm border-b border-sage-100">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4 text-sage-600" />
-              <span className="text-sage-700">(555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4 text-sage-600" />
-              <span className="text-sage-700">info@hopepregnancycenter.org</span>
-            </div>
-          </div>
-          <div className="text-sage-600">
-            <span>24/7 Support Available</span>
-          </div>
-        </div>
-
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
@@ -44,6 +37,7 @@ const Header = () => {
             </div>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <NavigationMenu>
               <NavigationMenuList className="space-x-6">
@@ -70,15 +64,19 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/services" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
                     What We Do
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/stories" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
-                    Stories
-                  </Link>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-64 p-4">
+                      <Link to="/services" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Our Services
+                      </Link>
+                      <Link to="/stories" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Stories
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -107,6 +105,53 @@ const Header = () => {
               </Button>
             </Link>
           </nav>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <Drawer open={isOpen} onOpenChange={setIsOpen}>
+              <DrawerTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>Navigation</DrawerTitle>
+                  <DrawerClose asChild>
+                    <Button variant="ghost" size="icon" className="absolute right-4 top-4">
+                      <X className="h-4 w-4" />
+                    </Button>
+                  </DrawerClose>
+                </DrawerHeader>
+                <div className="p-4 space-y-4">
+                  <div>
+                    <h3 className="font-semibold text-sage-700 mb-2">Who We Are</h3>
+                    <div className="pl-4 space-y-2">
+                      <Link to="/about" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">About Us</Link>
+                      <Link to="/about/team" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Team</Link>
+                      <Link to="/about/story" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Story</Link>
+                      <Link to="/about/impact" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Impact</Link>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sage-700 mb-2">What We Do</h3>
+                    <div className="pl-4 space-y-2">
+                      <Link to="/services" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Services</Link>
+                      <Link to="/stories" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Stories</Link>
+                    </div>
+                  </div>
+                  <Link to="/events" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Events</Link>
+                  <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Volunteer</Link>
+                  <Link to="/contact" onClick={() => setIsOpen(false)} className="block font-semibold text-sage-700 hover:text-rose-600">Contact</Link>
+                  <Link to="/donate" onClick={() => setIsOpen(false)}>
+                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white">
+                      Donate Now
+                    </Button>
+                  </Link>
+                </div>
+              </DrawerContent>
+            </Drawer>
+          </div>
         </div>
       </div>
     </header>
