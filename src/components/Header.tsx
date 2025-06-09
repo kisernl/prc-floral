@@ -1,7 +1,15 @@
 
 import React from 'react';
-import { Heart, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Heart, Phone, Mail, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 
 const Header = () => {
   return (
@@ -26,7 +34,7 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="p-2 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full">
               <Heart className="h-8 w-8 text-rose-600" />
             </div>
@@ -34,17 +42,70 @@ const Header = () => {
               <h1 className="text-2xl font-bold text-sage-800">Hope Pregnancy Center</h1>
               <p className="text-sm text-sage-600">Supporting families with love and care</p>
             </div>
-          </div>
+          </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">About</a>
-            <a href="#services" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">Services</a>
-            <a href="#impact" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">Our Impact</a>
-            <a href="#testimonials" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">Stories</a>
-            <a href="#contact" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">Contact</a>
-            <Button className="bg-rose-600 hover:bg-rose-700 text-white">
-              Donate Now
-            </Button>
+          <nav className="hidden md:flex items-center space-x-6">
+            <NavigationMenu>
+              <NavigationMenuList className="space-x-6">
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent">
+                    Who We Are
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-64 p-4">
+                      <Link to="/about" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        About Us
+                      </Link>
+                      <Link to="/about/team" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Our Team
+                      </Link>
+                      <Link to="/about/story" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Our Story
+                      </Link>
+                      <Link to="/about/impact" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
+                        Our Impact
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/services" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                    What We Do
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/stories" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                    Stories
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/events" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                    Events
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/volunteer" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                    Volunteer
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link to="/contact" className="text-sage-700 hover:text-rose-600 transition-colors font-medium">
+                    Contact
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Link to="/donate">
+              <Button className="bg-rose-600 hover:bg-rose-700 text-white">
+                Donate Now
+              </Button>
+            </Link>
           </nav>
         </div>
       </div>
