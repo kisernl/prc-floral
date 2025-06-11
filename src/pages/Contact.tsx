@@ -24,10 +24,10 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Get in Touch</h2>
               
-              <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div className="grid lg:grid-cols-2 gap-12 mb-12">
                 {/* Contact Details */}
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -69,37 +69,46 @@ const Contact = () => {
                       <p className="text-sm text-sage-500">24/7 helpline always available</p>
                     </div>
                   </div>
-                </div>
 
-                {/* Quick Contact Actions */}
-                <div className="bg-sage-50 p-8 rounded-lg">
-                  <h3 className="text-2xl font-bold text-sage-800 mb-6">Connect With Us Today</h3>
-                  <p className="text-sage-600 mb-8 leading-relaxed">
-                    Ready to reach out? Choose the method that's most comfortable for you. 
-                    We're here to listen and support you with compassion and confidentiality.
-                  </p>
-                  
-                  <div className="space-y-4">
+                  {/* Contact Action Buttons */}
+                  <div className="bg-sage-50 p-6 rounded-lg space-y-4">
+                    <h3 className="text-xl font-bold text-sage-800 mb-4">Connect With Us Today</h3>
+                    
                     <a href="tel:+15551234567">
-                      <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-4 text-lg">
+                      <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-3">
                         <Phone className="mr-3 h-5 w-5" />
                         Call Us Now: (555) 123-4567
                       </Button>
                     </a>
                     
                     <a href="mailto:info@hopepregnancycenter.org?subject=Support%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0AThank%20you">
-                      <Button variant="outline" className="w-full border-sage-300 text-sage-700 hover:bg-sage-100 py-4 text-lg">
+                      <Button variant="outline" className="w-full border-sage-300 text-sage-700 hover:bg-sage-100 py-3">
                         <Mail className="mr-3 h-5 w-5" />
                         Send Us an Email
                       </Button>
                     </a>
+                    
+                    <div className="mt-6 p-4 bg-white rounded-lg border border-sage-200">
+                      <p className="text-sm text-sage-600 text-center">
+                        <strong>Confidential & Free:</strong> All our services are completely confidential 
+                        and provided at no cost to you.
+                      </p>
+                    </div>
                   </div>
-                  
-                  <div className="mt-8 p-4 bg-white rounded-lg border border-sage-200">
-                    <p className="text-sm text-sage-600 text-center">
-                      <strong>Confidential & Free:</strong> All our services are completely confidential 
-                      and provided at no cost to you.
-                    </p>
+                </div>
+
+                {/* Map */}
+                <div className="bg-sage-50 rounded-lg overflow-hidden">
+                  <div className="h-96 bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <MapPin className="h-16 w-16 text-sage-500 mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-sage-700 mb-2">Find Us Here</h3>
+                      <p className="text-sage-600 mb-4">123 Hope Street<br />Caring City, CC 12345</p>
+                      <p className="text-sm text-sage-500">
+                        Interactive map coming soon. For now, please use the address above 
+                        in your preferred navigation app.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
