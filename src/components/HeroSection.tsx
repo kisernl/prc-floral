@@ -58,8 +58,8 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-sage-200">
               <img 
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80" 
-                alt="Beautiful flowers representing hope and new life"
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" 
+                alt="Supportive family moment representing hope and new beginnings"
                 className="w-full h-80 object-cover rounded-xl"
               />
               <div className="absolute -bottom-4 -right-4 bg-rose-100 rounded-full p-6">

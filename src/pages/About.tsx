@@ -39,8 +39,13 @@ const About = () => {
                 </p>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-rose-100 to-sage-100 rounded-2xl p-8 h-64 flex items-center justify-center">
-                  <Heart className="h-24 w-24 text-rose-500" />
+                <img 
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=600&q=80" 
+                  alt="Compassionate care and support"
+                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-rose-100 rounded-full p-6">
+                  <Heart className="h-12 w-12 text-rose-600" />
                 </div>
               </div>
             </div>
@@ -89,6 +94,47 @@ const About = () => {
                     View Our Impact
                   </Button>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section with Image */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" 
+                  alt="Community support and care"
+                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-sage-800 mb-6">Our Values</h2>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Heart className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-sage-800">Compassion</h3>
+                      <p className="text-sage-600">We approach every person with empathy and understanding.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Users className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-sage-800">Community</h3>
+                      <p className="text-sage-600">We believe in the power of community support and connection.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <BookOpen className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-sage-800">Education</h3>
+                      <p className="text-sage-600">We provide resources and education to empower informed decisions.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

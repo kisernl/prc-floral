@@ -1,11 +1,25 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Phone, Mail, MapPin, Clock, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Contact = () => {
+  useEffect(() => {
+    // Load Tally embed script
+    const script = document.createElement('script');
+    script.innerHTML = `
+      var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+    `;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -98,19 +112,52 @@ const Contact = () => {
                 </div>
 
                 {/* Map */}
-                <div className="bg-sage-50 rounded-lg overflow-hidden">
-                  <div className="h-96 bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <MapPin className="h-16 w-16 text-sage-500 mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold text-sage-700 mb-2">Find Us Here</h3>
-                      <p className="text-sage-600 mb-4">123 Hope Street<br />Caring City, CC 12345</p>
-                      <p className="text-sm text-sage-500">
-                        Interactive map coming soon. For now, please use the address above 
-                        in your preferred navigation app.
-                      </p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="bg-sage-50 rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.319!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27c3b0b5e5%3A0x8e34c60d89e50d!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1638360800000!5m2!1sen!2sus"
+                      width="100%"
+                      height="300"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Hope Pregnancy Center Location"
+                    ></iframe>
+                  </div>
+                  
+                  <div className="relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" 
+                      alt="Welcoming office environment"
+                      className="w-full h-48 object-cover rounded-xl shadow-lg"
+                    />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 bg-sage-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-sage-800 text-center mb-8">Send Us a Message</h2>
+              <p className="text-lg text-sage-600 text-center mb-8">
+                Fill out the form below and we'll get back to you as soon as possible.
+              </p>
+              <div className="bg-white rounded-lg shadow-sm p-8">
+                <iframe 
+                  data-tally-src="https://tally.so/embed/31geD1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                  loading="lazy" 
+                  width="100%" 
+                  height="200" 
+                  frameBorder="0" 
+                  marginHeight="0" 
+                  marginWidth="0" 
+                  title="Sample PRC form"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -122,10 +169,21 @@ const Contact = () => {
             <div className="max-w-3xl mx-auto">
               <Heart className="h-16 w-16 text-rose-500 mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-sage-800 mb-6">Need Immediate Support?</h2>
-              <p className="text-xl text-sage-600 mb-8 leading-relaxed">
-                If you're in crisis or need immediate assistance, don't hesitate to reach out. 
-                Our 24/7 helpline is staffed by trained counselors ready to provide support.
-              </p>
+              <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+                <div>
+                  <p className="text-xl text-sage-600 leading-relaxed">
+                    If you're in crisis or need immediate assistance, don't hesitate to reach out. 
+                    Our 24/7 helpline is staffed by trained counselors ready to provide support.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80" 
+                    alt="Supportive counseling session"
+                    className="w-full h-48 object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+15551234567">
                   <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
