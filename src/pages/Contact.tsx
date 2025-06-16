@@ -119,7 +119,7 @@ const Contact = () => {
                       width="100%"
                       height="300"
                       style={{ border: 0 }}
-                      allowFullScreen=""
+                      allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       title="Hope Pregnancy Center Location"
@@ -154,8 +154,8 @@ const Contact = () => {
                   width="100%" 
                   height="200" 
                   frameBorder="0" 
-                  marginHeight="0" 
-                  marginWidth="0" 
+                  marginHeight={0} 
+                  marginWidth={0} 
                   title="Sample PRC form"
                 ></iframe>
               </div>
