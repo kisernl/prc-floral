@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 import { Heart, ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import {
   Drawer,
   DrawerClose,
@@ -39,69 +38,62 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <NavigationMenu>
-              <NavigationMenuList className="space-x-6">
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
-                    Who We Are
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="absolute left-0 top-full bg-white border border-sage-200 shadow-lg rounded-lg z-50">
-                    <div className="w-64 p-4">
-                      <Link to="/about" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        About Us
-                      </Link>
-                      <Link to="/about/team" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Our Team
-                      </Link>
-                      <Link to="/about/story" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Our Story
-                      </Link>
-                      <Link to="/about/impact" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Our Impact
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent border-none outline-none flex items-center gap-1">
+                Who We Are
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link to="/about" className="w-full">About Us</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/about/team" className="w-full">Our Team</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/about/story" className="w-full">Our Story</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/about/impact" className="w-full">Our Impact</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
-                    What We Do
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="absolute left-0 top-full bg-white border border-sage-200 shadow-lg rounded-lg z-50">
-                    <div className="w-64 p-4">
-                      <Link to="/services" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Our Services
-                      </Link>
-                      <Link to="/stories" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Stories
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent border-none outline-none flex items-center gap-1">
+                What We Do
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link to="/services" className="w-full">Our Services</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/stories" className="w-full">Stories</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent relative">
-                    Connect With Us
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="absolute left-0 top-full bg-white border border-sage-200 shadow-lg rounded-lg z-50">
-                    <div className="w-64 p-4">
-                      <Link to="/contact" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Contact
-                      </Link>
-                      <Link to="/events" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Events
-                      </Link>
-                      <Link to="/volunteer" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Volunteer
-                      </Link>
-                      <Link to="/blog" className="block px-3 py-2 text-sage-700 hover:text-rose-600 hover:bg-sage-50 rounded transition-colors">
-                        Blog
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent border-none outline-none flex items-center gap-1">
+                Connect With Us
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link to="/contact" className="w-full">Contact</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/events" className="w-full">Events</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/volunteer" className="w-full">Volunteer</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/blog" className="w-full">Blog</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Link to="/donate">
               <Button className="bg-rose-600 hover:bg-rose-700 text-white">
@@ -114,8 +106,8 @@ const Header = () => {
           <div className="md:hidden">
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-12 w-12 text-sage-800 hover:bg-sage-100">
-                  <Menu className="h-8 w-8" />
+                <Button variant="ghost" size="icon" className="h-14 w-14 text-sage-800 hover:bg-sage-100">
+                  <Menu className="h-10 w-10" />
                 </Button>
               </DrawerTrigger>
               <DrawerContent className="bg-white text-sage-800 border-t-sage-200">
@@ -127,10 +119,10 @@ const Header = () => {
                     </Button>
                   </DrawerClose>
                 </DrawerHeader>
-                <div className="p-6 space-y-6">
+                <div className="p-6 space-y-8">
                   <div>
-                    <h3 className="font-semibold text-sage-800 mb-3">Who We Are</h3>
-                    <div className="pl-4 space-y-3">
+                    <h3 className="font-semibold text-sage-800 mb-4">Who We Are</h3>
+                    <div className="pl-4 space-y-4">
                       <Link to="/about" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">About Us</Link>
                       <Link to="/about/team" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Team</Link>
                       <Link to="/about/story" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Story</Link>
@@ -138,15 +130,15 @@ const Header = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sage-800 mb-3">What We Do</h3>
-                    <div className="pl-4 space-y-3">
+                    <h3 className="font-semibold text-sage-800 mb-4">What We Do</h3>
+                    <div className="pl-4 space-y-4">
                       <Link to="/services" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Our Services</Link>
                       <Link to="/stories" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Stories</Link>
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sage-800 mb-3">Connect With Us</h3>
-                    <div className="pl-4 space-y-3">
+                    <h3 className="font-semibold text-sage-800 mb-4">Connect With Us</h3>
+                    <div className="pl-4 space-y-4">
                       <Link to="/contact" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Contact</Link>
                       <Link to="/events" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Events</Link>
                       <Link to="/volunteer" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Volunteer</Link>
