@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, ChevronDown, Menu, X } from 'lucide-react';
@@ -31,8 +30,7 @@ const Header = () => {
               <Heart className="h-8 w-8 text-rose-600" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-sage-800">Hope Pregnancy Center</h1>
-              <p className="text-sm text-sage-600">Supporting families with love and care</p>
+              <h1 className="text-3xl font-bold text-sage-800">Floral PRC</h1>
             </div>
           </Link>
 
@@ -110,16 +108,23 @@ const Header = () => {
                   <Menu className="h-10 w-10" />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent className="bg-white text-sage-800 border-t-sage-200">
-                <DrawerHeader className="border-b border-sage-200">
-                  <DrawerTitle className="text-sage-800">Navigation</DrawerTitle>
+              <DrawerContent className="bg-white text-sage-800 border-t-sage-200 h-[90vh] max-h-[90vh] flex flex-col">
+                <DrawerHeader className="border-b border-sage-200 flex-shrink-0">
+                  <div className="flex items-center space-x-3">
+                    <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-3">
+                      <div className="p-1.5 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full">
+                        <Heart className="h-6 w-6 text-rose-600" />
+                      </div>
+                      <DrawerTitle className="text-sage-800 hover:text-rose-600 transition-colors text-xl">Floral PRC</DrawerTitle>
+                    </Link>
+                  </div>
                   <DrawerClose asChild>
                     <Button variant="ghost" size="icon" className="absolute right-4 top-4 text-sage-800 hover:bg-sage-100">
                       <X className="h-4 w-4" />
                     </Button>
                   </DrawerClose>
                 </DrawerHeader>
-                <div className="p-6 space-y-8">
+                <div className="p-6 space-y-8 overflow-y-auto flex-grow">
                   <div>
                     <h3 className="font-semibold text-sage-800 mb-4">Who We Are</h3>
                     <div className="pl-4 space-y-4">
@@ -146,7 +151,7 @@ const Header = () => {
                     </div>
                   </div>
                   <Link to="/donate" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white">
+                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white mt-8">
                       Donate Now
                     </Button>
                   </Link>
