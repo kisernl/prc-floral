@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Heart, Gift, Users, Star } from 'lucide-react';
+import { Heart, Gift, Users, Star, ExternalLink, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Donate = () => {
-  const donationAmounts = [25, 50, 100, 250, 500, 1000];
   const impactItems = [
     { amount: "$25", impact: "Provides pregnancy tests for 5 women" },
     { amount: "$50", impact: "Covers one counseling session" },
@@ -30,89 +29,95 @@ const Donate = () => {
           </div>
         </section>
 
-        {/* Donation Form */}
+        {/* Donation Options */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12">
-                {/* Donation Amounts */}
-                <div>
-                  <h2 className="text-3xl font-bold text-sage-800 mb-8">Choose Your Donation</h2>
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    {donationAmounts.map((amount) => (
-                      <button
-                        key={amount}
-                        className="p-4 border-2 border-sage-200 rounded-lg text-center hover:border-rose-500 hover:bg-rose-50 transition-colors"
-                      >
-                        <span className="text-2xl font-bold text-sage-800">${amount}</span>
-                      </button>
-                    ))}
+                {/* Online Giving */}
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold text-sage-800 mb-8">Online Giving</h2>
+                  <div className="bg-sage-50 p-8 rounded-lg mb-6">
+                    <Heart className="h-16 w-16 text-rose-500 mx-auto mb-6" />
+                    <p className="text-sage-700 mb-6">
+                      Make a secure one-time or recurring donation through our online giving portal. 
+                      Your gift directly supports families in our community.
+                    </p>
                   </div>
                   
-                  <div className="mb-6">
-                    <label htmlFor="custom-amount" className="block text-sage-700 font-medium mb-2">
-                      Custom Amount
-                    </label>
-                    <div className="relative">
-                      <span className="absolute left-3 top-3 text-sage-600">$</span>
-                      <input
-                        type="number"
-                        id="custom-amount"
-                        placeholder="Enter amount"
-                        className="w-full pl-8 pr-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-sage-800 mb-4">Donation Type</h3>
-                    <div className="space-y-3">
-                      <label className="flex items-center">
-                        <input type="radio" name="donation-type" value="one-time" className="mr-3" defaultChecked />
-                        <span className="text-sage-700">One-time donation</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input type="radio" name="donation-type" value="monthly" className="mr-3" />
-                        <span className="text-sage-700">Monthly recurring donation</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-4 text-lg">
-                    Donate Now
+                  <Button 
+                    className="w-full bg-rose-600 hover:bg-rose-700 text-white py-4 text-lg mb-4"
+                    onClick={() => window.open('https://giving.portal.link', '_blank')}
+                  >
+                    <Gift className="mr-2 h-5 w-5" />
+                    Give Online Now
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
+                  
+                  <p className="text-sm text-sage-600">
+                    Secure online donations processed instantly
+                  </p>
                 </div>
 
-                {/* Impact Information */}
-                <div>
-                  <h3 className="text-3xl font-bold text-sage-800 mb-8">Your Impact</h3>
-                  <div className="space-y-4">
-                    {impactItems.map((item, index) => (
-                      <div key={index} className="bg-sage-50 p-4 rounded-lg">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center">
-                            <Heart className="h-6 w-6 text-white" />
-                          </div>
-                          <div>
-                            <div className="text-xl font-bold text-sage-800">{item.amount}</div>
-                            <div className="text-sage-600">{item.impact}</div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                {/* Retail Rewards Program */}
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold text-sage-800 mb-8">Shop & Give Back</h2>
+                  <div className="bg-rose-50 p-8 rounded-lg mb-6">
+                    <ShoppingCart className="h-16 w-16 text-rose-500 mx-auto mb-6" />
+                    <p className="text-sage-700 mb-6">
+                      Support our mission while you shop! Sign up for our retail rewards program 
+                      and participating local retailers will donate a percentage of your purchases.
+                    </p>
                   </div>
+                  
+                  <Button 
+                    className="w-full bg-sage-600 hover:bg-sage-700 text-white py-4 text-lg mb-4"
+                    onClick={() => window.open('/retail-rewards', '_blank')}
+                  >
+                    <ShoppingCart className="mr-2 h-5 w-5" />
+                    Learn About Retail Rewards
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                  
+                  <p className="text-sm text-sage-600">
+                    Turn everyday shopping into donations
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Other Ways to Give */}
+        {/* Impact Information */}
         <section className="py-16 bg-sage-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-sage-800 mb-8 text-center">Your Impact</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {impactItems.map((item, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Heart className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-xl font-bold text-sage-800">{item.amount}</div>
+                        <div className="text-sage-600">{item.impact}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Ways to Give */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Other Ways to Give</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg text-center shadow-md">
+              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-100">
                 <Gift className="h-16 w-16 text-rose-500 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-sage-800 mb-4">In-Kind Donations</h3>
                 <p className="text-sage-600 mb-6">
@@ -123,7 +128,7 @@ const Donate = () => {
                 </Button>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center shadow-md">
+              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-100">
                 <Users className="h-16 w-16 text-rose-500 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-sage-800 mb-4">Volunteer</h3>
                 <p className="text-sage-600 mb-6">
@@ -134,7 +139,7 @@ const Donate = () => {
                 </Button>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center shadow-md">
+              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-100">
                 <Star className="h-16 w-16 text-rose-500 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-sage-800 mb-4">Fundraise</h3>
                 <p className="text-sage-600 mb-6">
@@ -149,7 +154,7 @@ const Donate = () => {
         </section>
 
         {/* Transparency */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-sage-50">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-sage-800 mb-8">Financial Transparency</h2>
             <div className="max-w-3xl mx-auto">
