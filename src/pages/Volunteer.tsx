@@ -89,9 +89,7 @@ const Volunteer = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-br from-rose-100 to-sage-100 rounded-2xl p-8 h-80 flex items-center justify-center">
-                  <Heart className="h-32 w-32 text-rose-500" />
-                </div>
+                <img src="/images/mom_baby_2.png" alt="mom and baby" className="w-full h-full object-cover rounded-xl shadow-lg" />
               </div>
             </div>
           </div>

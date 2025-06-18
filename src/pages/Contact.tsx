@@ -29,8 +29,7 @@ const Contact = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-sage-800 mb-6">Contact Us</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
-              We're here for you 24/7. Reach out to us anytime you need support, 
-              have questions, or want to learn more about our services.
+              Reach out to us anytime you need support, have questions, or want to learn more about our services.
             </p>
           </div>
         </section>
@@ -47,9 +46,9 @@ const Contact = () => {
                   <div className="flex items-start space-x-4">
                     <Phone className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-sage-800 mb-1">24/7 Helpline</h3>
-                      <p className="text-sage-600">(555) 123-4567</p>
-                      <p className="text-sm text-sage-500">Free, confidential support anytime</p>
+                      <h3 className="font-semibold text-sage-800 mb-1">Call or Text</h3>
+                      <p className="text-sage-600">(218) 729-6697</p>
+                      {/* <p className="text-sm text-sage-500">Free, confidential support anytime</p> */}
                     </div>
                   </div>
 
@@ -57,8 +56,8 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-rose-500 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-sage-800 mb-1">Email</h3>
-                      <p className="text-sage-600">info@hopepregnancycenter.org</p>
-                      <p className="text-sm text-sage-500">We respond within 24 hours</p>
+                      <p className="text-sage-600">clinic@floralprc.com</p>
+                      {/* <p className="text-sm text-sage-500">We respond within 24 hours</p> */}
                     </div>
                   </div>
 
@@ -67,7 +66,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-sage-800 mb-1">Address</h3>
                       <p className="text-sage-600">123 Hope Street<br />Caring City, CC 12345</p>
-                      <p className="text-sm text-sage-500">Free parking available</p>
+                      {/* <p className="text-sm text-sage-500">Free parking available</p> */}
                     </div>
                   </div>
 
@@ -88,19 +87,20 @@ const Contact = () => {
                   <div className="bg-sage-50 p-6 rounded-lg space-y-4">
                     <h3 className="text-xl font-bold text-sage-800 mb-4">Connect With Us Today</h3>
                     
-                    <a href="tel:+15551234567">
+                    <a href="tel:+2187296697">
                       <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white py-3">
                         <Phone className="mr-3 h-5 w-5" />
-                        Call Us Now: (555) 123-4567
+                        Call Us: (218) 729-6697
                       </Button>
                     </a>
-                    
-                    <a href="mailto:info@hopepregnancycenter.org?subject=Support%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0AThank%20you">
-                      <Button variant="outline" className="w-full border-sage-300 text-sage-700 hover:bg-sage-100 py-3">
-                        <Mail className="mr-3 h-5 w-5" />
-                        Send Us an Email
-                      </Button>
-                    </a>
+                    <div className="mt-4">
+                      <a href="mailto:info@floralprc.org">
+                        <Button variant="outline" className="w-full border-sage-300 text-sage-700 hover:bg-sage-100 py-3">
+                          <Mail className="mr-3 h-5 w-5" />
+                          Send Us an Email
+                        </Button>
+                      </a>
+                    </div>
                     
                     <div className="mt-6 p-4 bg-white rounded-lg border border-sage-200">
                       <p className="text-sm text-sage-600 text-center">
@@ -117,21 +117,13 @@ const Contact = () => {
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.319!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27c3b0b5e5%3A0x8e34c60d89e50d!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1638360800000!5m2!1sen!2sus"
                       width="100%"
-                      height="300"
+                      height="400"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       title="Hope Pregnancy Center Location"
                     ></iframe>
-                  </div>
-                  
-                  <div className="relative">
-                    <img 
-                      src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" 
-                      alt="Welcoming office environment"
-                      className="w-full h-48 object-cover rounded-xl shadow-lg"
-                    />
                   </div>
                 </div>
               </div>
@@ -164,7 +156,7 @@ const Contact = () => {
         </section>
 
         {/* Emergency Contact */}
-        <section className="py-16 bg-rose-50">
+        {/* <section className="py-16 bg-rose-50">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <Heart className="h-16 w-16 text-rose-500 mx-auto mb-6" />
@@ -196,7 +188,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
