@@ -9,20 +9,20 @@ const Stories = () => {
     {
       name: "Sarah M.",
       title: "A Mother's Journey",
-      excerpt: "When I first came to Hope Pregnancy Center, I was scared and didn't know what to do. The staff welcomed me with open arms and helped me understand all my options.",
-      story: "I was 19 and pregnant, feeling completely overwhelmed. The counselors at Hope Pregnancy Center didn't judge me - they just listened and provided the support I needed. Today, my daughter is 5 years old and thriving. I can't imagine my life without her, and I'm so grateful for the guidance I received during those uncertain times."
+      excerpt: "When I first came to Floral PRC, I was scared and didn't know what to do. The staff welcomed me with open arms and helped me understand all my options.",
+      story: "I was 19 and pregnant, feeling completely overwhelmed. The counselors at Floral PRC didn't judge me - they just listened and provided the support I needed. Today, my daughter is 5 years old and thriving. I can't imagine my life without her, and I'm so grateful for the guidance I received during those uncertain times."
     },
     {
       name: "Maria L.",
       title: "Finding Strength",
-      excerpt: "The parenting classes at Hope Pregnancy Center gave me the confidence I needed to be the mother I wanted to be.",
-      story: "As a first-time mom, I had so many questions and fears. The parenting classes taught me everything from how to change a diaper to understanding my baby's development. The other moms in the class became my support system, and we still meet regularly. Hope Pregnancy Center didn't just help me during pregnancy - they helped me become a confident parent."
+      excerpt: "The parenting classes at Floral PRC gave me the confidence I needed to be the mother I wanted to be.",
+      story: "As a first-time mom, I had so many questions and fears. The parenting classes taught me everything from how to change a diaper to understanding my baby's development. The other moms in the class became my support system, and we still meet regularly. Floral PRC didn't just help me during pregnancy - they helped me become a confident parent."
     },
     {
       name: "Jennifer K.",
       title: "A Second Chance",
-      excerpt: "After a difficult first pregnancy, Hope Pregnancy Center helped me navigate my second pregnancy with hope and confidence.",
-      story: "My first pregnancy ended in loss, and when I became pregnant again, I was filled with anxiety. The counselors at Hope Pregnancy Center understood my fears and provided the emotional support I needed. They connected me with other women who had similar experiences, and together we found healing. My son is now 2 years old, and I volunteer at the center to help other women who are walking similar paths."
+      excerpt: "After a difficult first pregnancy, Floral PRC helped me navigate my second pregnancy with hope and confidence.",
+      story: "My first pregnancy ended in loss, and when I became pregnant again, I was filled with anxiety. The counselors at Floral PRC understood my fears and provided the emotional support I needed. They connected me with other women who had similar experiences, and together we found healing. My son is now 2 years old, and I volunteer at the center to help other women who are walking similar paths."
     }
   ];
 
@@ -73,7 +73,7 @@ const Stories = () => {
               <Heart className="h-16 w-16 text-rose-500 mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-sage-800 mb-6">Share Your Story</h2>
               <p className="text-xl text-sage-600 mb-8 leading-relaxed">
-                Has Hope Pregnancy Center been part of your journey? We'd love to hear how our services 
+                Has Floral PRC been part of your journey? We'd love to hear how our services 
                 have impacted your life. Your story could inspire and encourage others facing similar challenges.
               </p>
               <button className="bg-rose-600 hover:bg-rose-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
