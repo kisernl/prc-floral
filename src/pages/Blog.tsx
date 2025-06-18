@@ -65,7 +65,7 @@ const Blog = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-sage-800 mb-6">Our Blog</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
-              Stay informed with helpful articles, event announcements, and stories from our team.
+              Stay informed with updates from our team, event announcements, and stories from our friends.
             </p>
           </div>
         </section>

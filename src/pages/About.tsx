@@ -74,7 +74,7 @@ const About = () => {
                 <BookOpen className="h-16 w-16 text-rose-500 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-sage-800 mb-4">Our Story</h3>
                 <p className="text-sage-600 mb-6">
-                  Discover how Hope Pregnancy Center began and the journey that brought us here.
+                  Discover how Floral Pregnancy Center began and the journey that brought us here.
                 </p>
                 <Link to="/about/story">
                   <Button className="bg-rose-600 hover:bg-rose-700 text-white">

@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Heart, Gift, Users, Star, ExternalLink, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Donate = () => {
   const impactItems = [
@@ -112,9 +113,15 @@ const Donate = () => {
                 <p className="text-sage-600 mb-6">
                   Donate baby supplies, maternity clothes, or other essential items that directly benefit our clients.
                 </p>
-                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                  View Wish List
-                </Button>
+                  <a 
+                  href="https://docs.google.com/document/d/19RTz-6xXMMpmraCIj52KCQ2l6T53a7pDdMRgFJ-G6Zk/edit?usp=sharingk" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                      View Wish List
+                    </Button>
+                </a>
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-200">
@@ -123,9 +130,11 @@ const Donate = () => {
                 <p className="text-sage-600 mb-6">
                   Give your time and talents to support our mission. We have opportunities for every skill set and schedule.
                 </p>
-                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                  Learn More
-                </Button>
+                <Link to="/volunteer">
+                  <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-200">
@@ -134,9 +143,11 @@ const Donate = () => {
                 <p className="text-sage-600 mb-6">
                   Organize a fundraising event in your community or start a peer-to-peer campaign to support our work.
                 </p>
-                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                  Get Started
-                </Button>
+                <Link to="/contact">
+                  <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -165,9 +176,15 @@ const Donate = () => {
                   <div className="text-sage-600">Fundraising</div>
                 </div>
               </div>
-              <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                View Annual Report
-              </Button>
+              <a 
+                href="https://drive.google.com/file/d/1WIAgJOyOzFeKoF3ndlwDo1G1Y8plUeF1/view?usp=drive_link" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                  View Annual Report
+                </Button>
+              </a>
             </div>
           </div>
         </section>

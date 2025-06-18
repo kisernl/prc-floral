@@ -7,10 +7,10 @@ import { ArrowLeft, Heart, Users, Baby, Home } from 'lucide-react';
 
 const OurImpact = () => {
   const stats = [
-    { icon: Users, number: "15,000+", label: "Families Served" },
-    { icon: Baby, number: "8,500+", label: "Babies Born" },
-    { icon: Heart, number: "25,000+", label: "Counseling Sessions" },
-    { icon: Home, number: "3,200+", label: "Families Housed" }
+    { icon: Home, number: "11,000+", label: "Families Served" },
+    { icon: Baby, number: "800+", label: "Babies Born" },
+    { icon: Heart, number: "13,000+", label: "Counseling Sessions" },
+    { icon: Users, number: "25,000+", label: "Lives Touched" }
   ];
 
   return (
@@ -32,7 +32,7 @@ const OurImpact = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-sage-800 mb-6">Our Impact</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
-              For nearly three decades, Hope Pregnancy Center has been a source of strength and support 
+              For nearly three decades, Floral Pregnancy Center has been a source of strength and support 
               for families in our community. See how your generosity creates lasting change.
             </p>
           </div>

@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <div className="space-y-2">
               <a href="#about" className="block text-sm text-sage-300 hover:text-white transition-colors">About Us</a>
@@ -56,6 +56,61 @@ const Footer = () => {
               <a href="#donate" className="block text-sm text-sage-300 hover:text-white transition-colors">Donate</a>
               <a href="#volunteer" className="block text-sm text-sage-300 hover:text-white transition-colors">Volunteer</a>
               <a href="#contact" className="block text-sm text-sage-300 hover:text-white transition-colors">Contact</a>
+            </div>
+          </div> */}
+
+          {/* Affiliated Organizations */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold">Our Affiliates</h4>
+            <div className="grid grid-cols-2 gap-4">
+              <a 
+                href="https://care-net.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
+              >
+                <img 
+                  src="/images/Care-Net_Logo.png" 
+                  alt="Care Net" 
+                  className="h-12 w-auto max-w-[120px] object-contain"
+                />
+              </a>
+              <a 
+                href="https://www.ecfa.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
+              >
+                <img 
+                  src="/images/ECFA_Logo.png" 
+                  alt="ECFA" 
+                  className="h-12 w-auto max-w-[120px] object-contain"
+                />
+              </a>
+              <a 
+                href="https://www.heartbeatinternational.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
+              >
+                <img 
+                  src="/images/Heartbeat_Logo.png" 
+                  alt="Heartbeat International" 
+                  className="h-12 w-auto max-w-[120px] object-contain"
+                />
+              </a>
+              <a 
+                href="https://nifla.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
+              >
+                <img 
+                  src="/images/NIFLA_Logo.png" 
+                  alt="NIFLA" 
+                  className="h-12 w-auto max-w-[120px] object-contain"
+                />
+              </a>
             </div>
           </div>
 
@@ -89,13 +144,13 @@ const Footer = () => {
 
         <div className="border-t border-sage-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-sage-400">
-            &copy; 2024 Floral Pregnancy Center. All rights reserved. 501(c)(3) Non-profit Organization.
+            &copy; 2025 Floral Pregnancy Center. All rights reserved. 501(c)(3) Non-profit Organization   ||   web design & hosting by <a href="https://mayflycreative.co" target="_blank" rel="noopener noreferrer" className="text-sage-200 hover:text-rose-300 transition-colors">MayflyCreative.co</a>
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-sage-400 hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-sm text-sage-400 hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="text-sm text-sage-400 hover:text-white transition-colors">Financial Information</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

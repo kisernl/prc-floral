@@ -26,7 +26,7 @@ const OurStory = () => {
             <h1 className="text-5xl font-bold text-sage-800 mb-6">Our Story</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
               Every great mission begins with a single act of compassion. 
-              Discover how Hope Pregnancy Center grew from a simple vision to a beacon of hope in our community.
+              Discover how Floral Pregnancy Center grew from a simple vision to a beacon of hope in our community.
             </p>
           </div>
         </section>
@@ -45,7 +45,7 @@ const OurStory = () => {
                   <div>
                     <h3 className="text-2xl font-bold text-sage-800 mb-2">1995 - The Beginning</h3>
                     <p className="text-sage-600 text-lg leading-relaxed">
-                      Hope Pregnancy Center was founded by a group of community volunteers who saw the need 
+                      Floral Pregnancy Center was founded by a group of community volunteers who saw the need 
                       for compassionate support for women facing unplanned pregnancies. Starting in a small 
                       office with just two volunteers, we began offering free pregnancy tests and emotional support.
                     </p>

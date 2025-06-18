@@ -16,7 +16,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl text-sage-700 leading-relaxed">
-              At Hope Pregnancy Center, we believe every family deserves compassionate support, 
+              At Floral Pregnancy Center, we believe every family deserves compassionate support, 
               comprehensive resources, and unconditional love during their pregnancy journey.
             </p>
 
@@ -49,8 +49,8 @@ const HeroSection = () => {
                 <div className="text-sage-600 text-sm">Years of Service</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-rose-600">24/7</div>
-                <div className="text-sage-600 text-sm">Support Available</div>
+                <div className="text-3xl font-bold text-rose-600">1,200+</div>
+                <div className="text-sage-600 text-sm">Sonograms Performed</div>
               </div>
             </div>
           </div>

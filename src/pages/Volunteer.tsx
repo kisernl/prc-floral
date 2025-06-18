@@ -76,7 +76,7 @@ const Volunteer = () => {
               <div>
                 <h2 className="text-3xl font-bold text-sage-800 mb-6">Why Volunteer?</h2>
                 <p className="text-sage-600 text-lg leading-relaxed mb-6">
-                  Volunteering with Hope Pregnancy Center isn't just about giving back – it's about being part of 
+                  Volunteering with Floral Pregnancy Center isn't just about giving back – it's about being part of 
                   a community that believes in the value of every life and the power of compassionate support.
                 </p>
                 <div className="space-y-3">
