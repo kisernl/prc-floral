@@ -1,61 +1,60 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, User, ArrowRight, Heart } from 'lucide-react';
+import { Calendar, User, ArrowRight, Heart, PartyPopper } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Understanding Your Options: A Guide for Expecting Mothers",
-      excerpt: "Every pregnancy journey is unique. Learn about the different paths available and how our counselors can help you make informed decisions.",
-      date: "March 15, 2024",
-      author: "Dr. Sarah Johnson",
-      category: "Support"
-    },
-    {
-      id: 2,
-      title: "The Importance of Prenatal Care",
-      excerpt: "Discover why early and regular prenatal care is crucial for both mother and baby's health, and how our medical team can support you.",
-      date: "March 10, 2024",
-      author: "Nurse Maria Rodriguez",
-      category: "Health"
-    },
-    {
-      id: 3,
-      title: "Building a Support Network During Pregnancy",
-      excerpt: "Learn how to create a strong support system during your pregnancy journey, including family, friends, and community resources.",
-      date: "March 5, 2024",
-      author: "Linda Chen, LCSW",
-      category: "Community"
-    },
-    {
-      id: 4,
-      title: "Nutrition Tips for a Healthy Pregnancy",
-      excerpt: "Essential nutrition guidelines and meal planning tips to support your health and your baby's development during pregnancy.",
-      date: "February 28, 2024",
-      author: "Jennifer Martinez, RD",
-      category: "Health"
-    },
-    {
-      id: 5,
-      title: "Preparing for Life After Baby",
-      excerpt: "Practical advice for new parents on preparing for the changes and joys that come with welcoming a new baby into your family.",
-      date: "February 22, 2024",
-      author: "Dr. Sarah Johnson",
-      category: "Parenting"
-    },
-    {
-      id: 6,
-      title: "Mental Health and Pregnancy",
-      excerpt: "Understanding the emotional aspects of pregnancy and how to maintain good mental health throughout your journey.",
-      date: "February 15, 2024",
-      author: "Linda Chen, LCSW",
-      category: "Support"
-    }
-  ];
+  // const blogPosts = [
+  //   {
+  //     id: 1,
+  //     title: "Understanding Your Options: A Guide for Expecting Mothers",
+  //     excerpt: "Every pregnancy journey is unique. Learn about the different paths available and how our counselors can help you make informed decisions.",
+  //     date: "March 15, 2024",
+  //     author: "Dr. Sarah Johnson",
+  //     category: "Support"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "The Importance of Prenatal Care",
+  //     excerpt: "Discover why early and regular prenatal care is crucial for both mother and baby's health, and how our medical team can support you.",
+  //     date: "March 10, 2024",
+  //     author: "Nurse Maria Rodriguez",
+  //     category: "Health"
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Building a Support Network During Pregnancy",
+  //     excerpt: "Learn how to create a strong support system during your pregnancy journey, including family, friends, and community resources.",
+  //     date: "March 5, 2024",
+  //     author: "Linda Chen, LCSW",
+  //     category: "Community"
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Nutrition Tips for a Healthy Pregnancy",
+  //     excerpt: "Essential nutrition guidelines and meal planning tips to support your health and your baby's development during pregnancy.",
+  //     date: "February 28, 2024",
+  //     author: "Jennifer Martinez, RD",
+  //     category: "Health"
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Preparing for Life After Baby",
+  //     excerpt: "Practical advice for new parents on preparing for the changes and joys that come with welcoming a new baby into your family.",
+  //     date: "February 22, 2024",
+  //     author: "Dr. Sarah Johnson",
+  //     category: "Parenting"
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Mental Health and Pregnancy",
+  //     excerpt: "Understanding the emotional aspects of pregnancy and how to maintain good mental health throughout your journey.",
+  //     date: "February 15, 2024",
+  //     author: "Linda Chen, LCSW",
+  //     category: "Support"
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen">
@@ -66,14 +65,56 @@ const Blog = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl font-bold text-sage-800 mb-6">Our Blog</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
-              Stay informed with helpful articles, tips, and stories from our team of 
-              medical professionals and counselors.
+              Stay informed with helpful articles, event announcements, and stories from our team.
             </p>
           </div>
         </section>
 
-        {/* Blog Posts */}
+        {/* Substack Announcement */}
         <section className="py-16 bg-white">
+        {/* <section className="bg-gradient-to-r from-rose-50 to-sage-50 py-12"> */}
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8 border border-sage-100">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:mr-8 mb-6 md:mb-0">
+                  <div className="bg-rose-100 text-rose-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto md:mx-0">
+                    <PartyPopper className="w-8 h-8" />
+                  </div>
+                </div>
+                <div className="text-center md:text-left">
+                  <h2 className="text-2xl font-bold text-sage-800 mb-3">Join us on Substack!</h2>
+                  <p className="text-sage-600 mb-4">
+                    We're excited to share that we're posting on Substack! 
+                    Now you can get our latest updates delivered straight to your inbox or read them 
+                    on the Substack app. It's our new way to keep you connected with our latest news 
+                    and stories.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a 
+                      href="https://floralprc.substack.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center"
+                    >
+                      Subscribe on Substack
+                    </a>
+                    {/* <a 
+                      href="https://substack.com/@mayflycreative" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="border border-sage-300 text-sage-700 hover:bg-sage-50 px-6 py-3 rounded-lg font-medium transition-colors text-center"
+                    >
+                      View Our Latest Post
+                    </a> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Posts */}
+        {/* <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid gap-8">
@@ -109,7 +150,6 @@ const Blog = () => {
                 ))}
               </div>
 
-              {/* Load More */}
               <div className="text-center mt-12">
                 <Button className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3">
                   Load More Articles
@@ -117,10 +157,10 @@ const Blog = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Newsletter Signup */}
-        <section className="py-16 bg-rose-50">
+        {/* <section className="py-16 bg-rose-50">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-2xl mx-auto">
               <Heart className="h-12 w-12 text-rose-500 mx-auto mb-6" />
@@ -141,7 +181,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

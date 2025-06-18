@@ -1,7 +1,8 @@
-
 import React from 'react';
-import { Quote, Star } from 'lucide-react';
+import { Quote, Star, Users, Heart, Gift } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -73,13 +74,31 @@ const TestimonialsSection = () => {
               Whether you're seeking support, want to volunteer, or wish to make a donation, 
               you're helping us create a stronger, more compassionate community for all families.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                Share Your Story
-              </button>
-              <button className="border border-sage-400 text-sage-700 hover:bg-sage-50 px-6 py-3 rounded-lg font-medium transition-colors">
-                Become a Volunteer
-              </button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/stories">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-sage-400 hover:border-rose-600 text-sage-700 hover:text-rose-600 hover:bg-sage-50 px-8 py-3 transition-colors"
+                >
+                  <Heart className="mr-2 h-5 w-5" />
+                  Share Your Story
+                </Button>
+              </Link>
+
+              <Link to="/volunteer">
+                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
+                  <Users className="mr-2 h-5 w-5" />
+                  Become a Volunteer
+                </Button>
+              </Link>
+                
+              <Link to="/donate">
+                <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3">
+                  <Gift className="mr-2 h-5 w-5" />
+                  Make a Donation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

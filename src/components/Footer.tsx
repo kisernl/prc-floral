@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Heart, Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 
@@ -14,7 +13,7 @@ const Footer = () => {
                 <Heart className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Hope Pregnancy Center</h3>
+                <h3 className="text-xl font-bold">Floral Pregnancy Center</h3>
                 <p className="text-sm text-sage-300">Supporting families with love</p>
               </div>
             </div>
@@ -34,16 +33,16 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-rose-400" />
-                <span className="text-sm">info@hopepregnancycenter.org</span>
+                <span className="text-sm">info@floralprc.org</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-rose-400" />
                 <span className="text-sm">123 Hope Street, Your City, ST 12345</span>
               </div>
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Clock className="h-4 w-4 text-rose-400" />
                 <span className="text-sm">24/7 Support Available</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -74,25 +73,23 @@ const Footer = () => {
                 <Twitter className="h-4 w-4" />
               </a>
             </div>
-            <div className="space-y-2">
-              <p className="text-sm text-sage-300">Subscribe to our newsletter</p>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <input 
-                  type="email" 
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 text-sm bg-sage-700 border border-sage-600 rounded-lg focus:outline-none focus:border-rose-500 min-w-0"
-                />
-                <button className="px-4 py-2 bg-rose-600 text-white text-sm rounded-lg hover:bg-rose-700 transition-colors whitespace-nowrap">
-                  Subscribe
-                </button>
-              </div>
+            <div className="space-y-2 mt-4">
+              <p className="text-sm text-sage-300">Keep up with our latest news and updates</p>
+              <a 
+                href="https://floralprc.substack.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-2 bg-rose-600 text-white text-sm font-medium rounded-lg hover:bg-rose-700 transition-colors whitespace-nowrap"
+              >
+                Subscribe on Substack
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-sage-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-sage-400">
-            © 2024 Hope Pregnancy Center. All rights reserved. 501(c)(3) Non-profit Organization.
+            &copy; 2024 Floral Pregnancy Center. All rights reserved. 501(c)(3) Non-profit Organization.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-sage-400 hover:text-white transition-colors">Privacy Policy</a>

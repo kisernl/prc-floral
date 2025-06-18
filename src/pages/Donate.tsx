@@ -63,7 +63,7 @@ const Donate = () => {
                   <Button 
                     variant="outline"
                     className="w-full border-sage-300 text-sage-700 hover:bg-sage-50 py-4 text-lg mb-4"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open('https://docs.google.com/document/d/1Zu7q4EsS0q_GdRx9hmnHvzjuKPK0jAybmDniTnRyhjo/edit?usp=sharing', '_blank', 'noopener,noreferrer')}
                   >
                     <Gift className="mr-2 h-5 w-5" />
                     View Retail Partners

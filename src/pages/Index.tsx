@@ -54,39 +54,6 @@ const Index = () => {
         </section>
 
         <TestimonialsSection />
-        
-        {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-br from-sage-50 to-rose-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-sage-800 mb-6">Get Involved</h2>
-            <p className="text-xl text-sage-600 mb-12 max-w-3xl mx-auto">
-              There are many ways to support families in our community. Whether through volunteering, donations, or simply sharing our story, every action makes a difference.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/volunteer">
-                <Button size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
-                  <Users className="mr-2 h-5 w-5" />
-                  Become a Volunteer
-                </Button>
-              </Link>
-              
-              <Link to="/donate">
-                <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3">
-                  <Heart className="mr-2 h-5 w-5" />
-                  Make a Donation
-                </Button>
-              </Link>
-              
-              <Link to="/stories">
-                <Button size="lg" variant="outline" className="border-sage-400 text-sage-700 hover:bg-sage-50 px-8 py-3">
-                  <Gift className="mr-2 h-5 w-5" />
-                  Share Your Story
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
