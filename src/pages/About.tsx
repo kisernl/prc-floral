@@ -40,7 +40,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=600&q=80" 
+                  src="/images/family_1.png" 
                   alt="Compassionate care and support"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -105,7 +105,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" 
+                  src="/images/family_2.png" 
                   alt="Community support and care"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />

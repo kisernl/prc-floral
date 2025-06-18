@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -28,64 +27,73 @@ const OurTeam = () => {
       name: "Sarah Johnson",
       title: "Executive Director",
       bio: "With over 15 years of experience in nonprofit leadership, Sarah brings passion and vision to our mission. She holds a Master's in Public Administration and has dedicated her career to supporting families in crisis.",
-      email: "sarah@hopepregnancycenter.org",
-      phone: "(555) 123-4567"
+      email: "sarah@floralprc.org",
+      phone: "(555) 123-4567",
+      image: "/images/female_placeholder.png"
     },
     {
       name: "Dr. Maria Rodriguez",
       title: "Medical Director",
       bio: "Dr. Rodriguez provides medical oversight and ensures the highest quality of care for our clients. She is board-certified in family medicine and has 20 years of experience in women's healthcare.",
-      email: "maria@hopepregnancycenter.org",
-      phone: "(555) 123-4568"
+      email: "maria@floralprc.org",
+      phone: "(555) 123-4568",
+      image: "/images/female_placeholder.png"
     },
     {
       name: "Emily Chen",
       title: "Counseling Director",
       bio: "Emily leads our counseling services with compassion and professional expertise in family support. She holds a Master's in Clinical Psychology and specializes in crisis counseling.",
-      email: "emily@hopepregnancycenter.org",
-      phone: "(555) 123-4569"
+      email: "emily@floralprc.org",
+      phone: "(555) 123-4569",
+      image: "/images/female_placeholder.png"
     },
     {
       name: "Michael Thompson",
       title: "Development Director",
       bio: "Michael oversees fundraising and donor relations, ensuring sustainable support for our programs. He has 12 years of experience in nonprofit development and community engagement.",
-      email: "michael@hopepregnancycenter.org",
-      phone: "(555) 123-4570"
+      email: "michael@floralprc.org",
+      phone: "(555) 123-4570",
+      image: "/images/male_placeholder.png"
     },
     {
       name: "Lisa Wang",
       title: "Program Coordinator",
       bio: "Lisa manages our educational programs and community outreach initiatives. She holds a Bachelor's in Social Work and is passionate about family education and support.",
-      email: "lisa@hopepregnancycenter.org",
-      phone: "(555) 123-4571"
+      email: "lisa@floralprc.org",
+      phone: "(555) 123-4571",
+      image: "/images/female_placeholder.png" 
     },
     {
       name: "David Brown",
       title: "Finance Manager",
       bio: "David ensures financial integrity and manages our resources responsibly. He is a CPA with 10 years of experience in nonprofit financial management.",
-      email: "david@hopepregnancycenter.org",
-      phone: "(555) 123-4572"
+      email: "david@floralprc.org",
+      phone: "(555) 123-4572",
+      image: "/images/male_placeholder.png"
     },
     {
       name: "Rachel Green",
       title: "Volunteer Coordinator",
       bio: "Rachel recruits, trains, and manages our wonderful team of volunteers. She has a background in human resources and volunteer management.",
-      email: "rachel@hopepregnancycenter.org",
-      phone: "(555) 123-4573"
+      email: "rachel@floralprc.org",
+      phone: "(555) 123-4573",
+      image: "/images/female_placeholder.png"
     },
     {
       name: "James Wilson",
       title: "Facilities Manager",
       bio: "James maintains our facilities and ensures a safe, welcoming environment for all visitors. He has 15 years of experience in facility management and maintenance.",
-      email: "james@hopepregnancycenter.org",
-      phone: "(555) 123-4574"
+      email: "james@floralprc.org",
+      phone: "(555) 123-4574",
+      image: "/images/male_placeholder.png"
     },
     {
       name: "Amanda Davis",
       title: "Client Services Coordinator",
       bio: "Amanda is the first point of contact for many of our clients, providing intake services and initial support. She has a background in social services and client relations.",
-      email: "amanda@hopepregnancycenter.org",
-      phone: "(555) 123-4575"
+      email: "amanda@floralprc.org",
+      phone: "(555) 123-4575",
+      image: "/images/female_placeholder.png" 
     }
   ];
 
@@ -158,13 +166,13 @@ const OurTeam = () => {
                   administration, and community outreach to serve families with excellence.
                 </p>
               </div>
-              <div className="relative">
+              {/* <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1559059096-da65ba532173?auto=format&fit=crop&w=600&q=80" 
                   alt="Professional team meeting"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
                 />
-              </div>
+              </div> */}
             </div>
             
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -174,7 +182,11 @@ const OurTeam = () => {
                   className="bg-sage-50 rounded-lg p-6 text-center cursor-pointer hover:shadow-lg transition-shadow"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-rose-200 to-sage-200 rounded-full mx-auto mb-4"></div>
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-2 border-rose-100"
+                  />
                   <h3 className="text-lg font-bold text-sage-800 mb-1">{member.name}</h3>
                   <p className="text-rose-600 font-semibold text-sm">{member.title}</p>
                 </div>
@@ -194,13 +206,13 @@ const OurTeam = () => {
                   leaders committed to our mission of supporting families.
                 </p>
               </div>
-              <div className="relative">
+              {/* <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" 
                   alt="Board meeting in session"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
                 />
-              </div>
+              </div> */}
             </div>
             
             <div className="bg-white rounded-lg shadow-sm overflow-hidden max-w-4xl mx-auto">
@@ -235,26 +247,26 @@ const OurTeam = () => {
                 <p className="text-xl text-sage-600 mb-8">
                   Are you passionate about supporting families? We're always looking for dedicated individuals to join our mission.
                 </p>
-                <div className="space-x-4">
-                  <Link to="/jobs">
-                    <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+                  <Link to="/jobs" className="w-full sm:w-auto">
+                    <Button className="w-full sm:w-auto bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
                       View Open Positions
                     </Button>
                   </Link>
-                  <Link to="/contact">
-                    <Button variant="outline" className="border-sage-600 text-sage-600 hover:bg-sage-50 text-lg px-8 py-3">
+                  <Link to="/contact" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto border-sage-600 text-sage-600 hover:bg-sage-50 text-lg px-8 py-3">
                       General Inquiries
                     </Button>
                   </Link>
                 </div>
               </div>
-              <div className="relative">
+              {/* <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80" 
                   alt="Team collaboration"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -265,7 +277,11 @@ const OurTeam = () => {
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-rose-200 to-sage-200 rounded-full mx-auto mb-4"></div>
+              <img 
+                src={selectedMember?.image} 
+                alt={selectedMember?.name} 
+                className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-2 border-rose-100"
+              />
               <h3 className="text-2xl font-bold text-sage-800">{selectedMember?.name}</h3>
               <p className="text-rose-600 font-semibold">{selectedMember?.title}</p>
             </DialogTitle>

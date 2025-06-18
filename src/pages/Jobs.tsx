@@ -9,12 +9,13 @@ import { Button } from '@/components/ui/button';
 const Jobs = () => {
   const openPositions = [
     {
-      title: "Pregnancy Counselor",
-      department: "Counseling Services",
+      title: "Client Services Director",
+      department: "Client Services",
       type: "Full-time",
       location: "Main Campus",
       salary: "$45,000 - $55,000",
-      description: "Provide compassionate counseling and support to clients facing unplanned pregnancies.",
+      description: "Ensures the compassionate and effective delivery of all direct client services, staff, and programs.",
+      joblink: "https://docs.google.com/document/d/1bcOl7_kvcCz5CWP1IKrls16ZTmnXIyVmFpUztdEatVc/edit?usp=sharing"
     },
     {
       title: "Volunteer Coordinator",
@@ -23,14 +24,16 @@ const Jobs = () => {
       location: "Main Campus",
       salary: "$25,000 - $30,000",
       description: "Recruit, train, and manage volunteers across our various programs and initiatives.",
+      joblink: "https://docs.google.com/document/d/1KHzj0ZX7wzl6OPodXFrH8wX0gwTrBE0eZKrdoq-o53M/edit?usp=sharing"
     },
     {
-      title: "Medical Assistant",
-      department: "Medical Services",
+      title: "Administrative Assistant",
+      department: "Adminsitration",
       type: "Full-time",
       location: "Main Campus",
-      salary: "$38,000 - $45,000",
-      description: "Support medical staff in providing quality healthcare services to our clients.",
+      salary: "$39,000 - $45,000",
+      description: "Assists exectutive staff in day-to-day operations and provide administrative support.",
+      joblink: "https://docs.google.com/document/d/1LGO9Z04_vMayonhy-jfHDytqkcHceFoAAbljzHWHPPY/edit?usp=sharing"
     }
   ];
 
@@ -85,11 +88,11 @@ const Jobs = () => {
                     </div>
                   </div>
 
-                  <Link to="/contact">
+                  <a href={position.joblink} target="_blank" rel="noopener noreferrer">
                     <Button className="bg-rose-600 hover:bg-rose-700 text-white">
-                      Apply Now
+                      More Info
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
