@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Heart, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Stories = () => {
   const stories = [
@@ -76,9 +77,11 @@ const Stories = () => {
                 Has Floral PRC been part of your journey? We'd love to hear how our services 
                 have impacted your life. Your story could inspire and encourage others facing similar challenges.
               </p>
-              <button className="bg-rose-600 hover:bg-rose-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                Contact Us to Share
-              </button>
+              <Link to="/contact">
+                <button className="bg-rose-600 hover:bg-rose-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                  Contact Us to Share
+                </button>
+              </Link>
             </div>
           </div>
         </section>

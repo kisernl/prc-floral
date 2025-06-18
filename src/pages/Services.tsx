@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,7 +10,7 @@ const Services = () => {
       icon: Heart,
       title: "Pregnancy Testing & Ultrasounds",
       description: "Free, confidential pregnancy testing and ultrasound services provided by licensed medical professionals.",
-      features: ["Free pregnancy tests", "Limited ultrasounds", "Medical consultations", "Results interpretation"]
+      features: ["Free pregnancy tests", "Limited ultrasounds", "Medical consultations", "Prenatal Clinic"]
     },
     {
       icon: Users,
@@ -91,7 +90,7 @@ const Services = () => {
                   </div>
                   <h3 className="text-xl font-bold text-sage-800 mb-3">1. Connect</h3>
                   <p className="text-sage-600">
-                    Reach out to us through our 24/7 helpline, walk-in visits, or online contact form. 
+                    Reach out to us by phone or text, walk-in visits, or our online contact form. 
                     We're here when you need us most.
                   </p>
                 </div>
@@ -128,12 +127,16 @@ const Services = () => {
               Don't wait to get the support you need. Contact us today to schedule your free, confidential appointment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
-                Schedule Appointment
-              </Button>
-              <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3">
-                Call (555) 123-4567
-              </Button>
+              <a href="mailto:clinic@floralprc.com">
+                <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
+                  Schedule Appointment
+                </Button>
+              </a>
+              <a href="tel:+2187296697">
+                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3">
+                  Call (218) 729-6697
+                </Button>
+              </a>
             </div>
           </div>
         </section>
