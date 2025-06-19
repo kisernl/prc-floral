@@ -89,7 +89,7 @@ const Volunteer = () => {
                 </div>
               </div>
               <div className="relative">
-                <img src="/images/mom_baby_2.png" alt="mom and baby" className="w-full h-full object-cover rounded-xl shadow-lg" />
+                <img src={`${import.meta.env.BASE_URL}/images/mom_baby_2.png`} alt="mom and baby" className="w-full h-full object-cover rounded-xl shadow-lg" />
               </div>
             </div>
           </div>
