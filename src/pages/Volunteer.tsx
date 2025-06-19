@@ -201,13 +201,17 @@ const Volunteer = () => {
               how your unique skills and passions can contribute to our mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
-                Apply to Volunteer
-              </Button>
-              <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3 flex items-center">
-                <Phone className="h-5 w-5 mr-2" />
-                Call (555) 123-4567
-              </Button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScdYMEcNFmS1Te7c1MnbEd4NI8zE1ka2awL-JjShxVwQJzlww/viewform?usp=header/" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
+                  Apply to Volunteer
+                </Button>
+              </a>
+              <a href="tel:+2187296697">
+                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3 flex items-center">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call (218) 729-6697
+                </Button>
+              </a>
             </div>
           </div>
         </section>

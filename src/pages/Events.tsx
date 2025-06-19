@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -179,16 +178,16 @@ const Events = () => {
             <p className="text-xl text-sage-600 mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter to be the first to know about upcoming events, volunteer opportunities, and ways to get involved.
             </p>
-            <div className="max-w-md mx-auto flex space-x-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-sage-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
-              />
-              <Button className="bg-rose-600 hover:bg-rose-700 text-white px-6">
-                Subscribe
+            <a 
+              href="https://floralprc.substack.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 text-lg">
+                Subscribe on Substack
               </Button>
-            </div>
+            </a>
           </div>
         </section>
       </main>
