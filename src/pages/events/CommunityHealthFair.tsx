@@ -30,7 +30,7 @@ const CommunityHealthFair = () => {
                   <Calendar className="h-5 w-5 mr-3" />
                   <div>
                     <p className="font-semibold">Date</p>
-                    <p>April 6, 2024</p>
+                    <p>July 6, 2029</p>
                   </div>
                 </div>
                 <div className="flex items-center text-sage-600">

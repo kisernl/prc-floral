@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -118,6 +117,20 @@ const Volunteer = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="text-center mt-8">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd2Ae--CePX0T_pJFpTvYHrKEWmMgdgnDu_xuwpxFqqzwqSEg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button 
+                  className="bg-rose-600 hover:bg-rose-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
+                >
+                  Want to know more?
+                </Button>
+              </a>
             </div>
           </div>
         </section>

@@ -30,7 +30,7 @@ const BabyMeClasses = () => {
                   <Calendar className="h-5 w-5 mr-3" />
                   <div>
                     <p className="font-semibold">Starts</p>
-                    <p>March 20, 2024</p>
+                    <p>March 20, 2029 - May 1, 2029</p>
                   </div>
                 </div>
                 <div className="flex items-center text-sage-600">

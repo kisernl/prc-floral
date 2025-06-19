@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // base: "/prc-gentle-bloom/",
+  base: "/prc-gentle-bloom/",
 }));
