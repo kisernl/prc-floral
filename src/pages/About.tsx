@@ -40,7 +40,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/family_1.png`} 
+                  src="/images/family_1.png" 
                   alt="Compassionate care and support"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -105,7 +105,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/family_2.png`} 
+                  src="/images/family_2.png" 
                   alt="Community support and care"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />

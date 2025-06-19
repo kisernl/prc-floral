@@ -70,7 +70,7 @@ const Footer = () => {
                 className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
               >
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/Care-Net_Logo.png`} 
+                  src="/images/Care-Net_Logo.png" 
                   alt="Care Net" 
                   className="h-12 w-auto max-w-[120px] object-contain"
                 />
@@ -82,7 +82,7 @@ const Footer = () => {
                 className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
               >
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/ECFA_Logo.png`} 
+                  src="/images/ECFA_Logo.png" 
                   alt="ECFA" 
                   className="h-12 w-auto max-w-[120px] object-contain"
                 />
@@ -94,7 +94,7 @@ const Footer = () => {
                 className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
               >
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/Heartbeat_Logo.png`} 
+                  src="/images/Heartbeat_Logo.png" 
                   alt="Heartbeat International" 
                   className="h-12 w-auto max-w-[120px] object-contain"
                 />
@@ -106,7 +106,7 @@ const Footer = () => {
                 className="p-3 rounded-lg flex items-center justify-center h-20 hover:bg-sage-700/30 transition-colors"
               >
                 <img 
-                  src={`${import.meta.env.BASE_URL}/images/NIFLA_Logo.png`} 
+                  src="/images/NIFLA_Logo.png" 
                   alt="NIFLA" 
                   className="h-12 w-auto max-w-[120px] object-contain"
                 />

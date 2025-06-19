@@ -26,6 +26,7 @@ import BabyMeClasses from "./pages/events/BabyMeClasses";
 import CommunityHealthFair from "./pages/events/CommunityHealthFair";
 import VolunteerTraining from "./pages/events/VolunteerTraining";
 
+const basePath = import.meta.env.VITE_BASE_PATH || '/';
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -33,7 +34,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/prc-gentle-bloom/">
+      <BrowserRouter basename={basePath}>
       {/* <BrowserRouter> */}
         <ScrollToTop />
         <Routes>

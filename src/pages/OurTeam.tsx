@@ -29,7 +29,7 @@ const OurTeam = () => {
       bio: "With over 15 years of experience in nonprofit leadership, Sarah brings passion and vision to our mission. She holds a Master's in Public Administration and has dedicated her career to supporting families in crisis.",
       email: "sarah@floralprc.org",
       phone: "(555) 123-4567",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png`
+      image: `/images/female_placeholder.png`
     },
     {
       name: "Dr. Maria Rodriguez",
@@ -37,7 +37,7 @@ const OurTeam = () => {
       bio: "Dr. Rodriguez provides medical oversight and ensures the highest quality of care for our clients. She is board-certified in family medicine and has 20 years of experience in women's healthcare.",
       email: "maria@floralprc.org",
       phone: "(555) 123-4568",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png`
+      image: `/images/female_placeholder.png`
     },
     {
       name: "Emily Chen",
@@ -45,7 +45,7 @@ const OurTeam = () => {
       bio: "Emily leads our counseling services with compassion and professional expertise in family support. She holds a Master's in Clinical Psychology and specializes in crisis counseling.",
       email: "emily@floralprc.org",
       phone: "(555) 123-4569",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png`
+      image: `/images/female_placeholder.png`
     },
     {
       name: "Michael Thompson",
@@ -53,7 +53,7 @@ const OurTeam = () => {
       bio: "Michael oversees fundraising and donor relations, ensuring sustainable support for our programs. He has 12 years of experience in nonprofit development and community engagement.",
       email: "michael@floralprc.org",
       phone: "(555) 123-4570",
-      image: `${import.meta.env.BASE_URL}/images/male_placeholder.png`
+      image: `/images/male_placeholder.png`
     },
     {
       name: "Lisa Wang",
@@ -61,7 +61,7 @@ const OurTeam = () => {
       bio: "Lisa manages our educational programs and community outreach initiatives. She holds a Bachelor's in Social Work and is passionate about family education and support.",
       email: "lisa@floralprc.org",
       phone: "(555) 123-4571",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png` 
+      image: `/images/female_placeholder.png` 
     },
     {
       name: "David Brown",
@@ -69,7 +69,7 @@ const OurTeam = () => {
       bio: "David ensures financial integrity and manages our resources responsibly. He is a CPA with 10 years of experience in nonprofit financial management.",
       email: "david@floralprc.org",
       phone: "(555) 123-4572",
-      image: `${import.meta.env.BASE_URL}/images/male_placeholder.png`
+      image: `/images/male_placeholder.png`
     },
     {
       name: "Rachel Green",
@@ -77,7 +77,7 @@ const OurTeam = () => {
       bio: "Rachel recruits, trains, and manages our wonderful team of volunteers. She has a background in human resources and volunteer management.",
       email: "rachel@floralprc.org",
       phone: "(555) 123-4573",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png`
+      image: `/images/female_placeholder.png`
     },
     {
       name: "James Wilson",
@@ -85,7 +85,7 @@ const OurTeam = () => {
       bio: "James maintains our facilities and ensures a safe, welcoming environment for all visitors. He has 15 years of experience in facility management and maintenance.",
       email: "james@floralprc.org",
       phone: "(555) 123-4574",
-      image: `${import.meta.env.BASE_URL}/images/male_placeholder.png`
+      image: `/images/male_placeholder.png`
     },
     {
       name: "Amanda Davis",
@@ -93,7 +93,7 @@ const OurTeam = () => {
       bio: "Amanda is the first point of contact for many of our clients, providing intake services and initial support. She has a background in social services and client relations.",
       email: "amanda@floralprc.org",
       phone: "(555) 123-4575",
-      image: `${import.meta.env.BASE_URL}/images/female_placeholder.png` 
+      image: `/images/female_placeholder.png` 
     }
   ];
 
