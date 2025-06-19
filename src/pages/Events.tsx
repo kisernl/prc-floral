@@ -50,21 +50,24 @@ const Events = () => {
     }
   ];
 
-  const pastEvents = [
+  const recentEvents = [
     {
       title: "Holiday Gift Drive",
       date: "December 2023",
-      description: "Thanks to our amazing community, we collected over 500 gifts for families in need during the holiday season."
+      description: "Thanks to our amazing community, we collected over 500 gifts for families in need during the holiday season.",
+      reflectionUrl: null // Could be a URL to photos/reflection post
     },
     {
       title: "Fall Family Festival",
       date: "October 2023",
-      description: "Our annual family festival brought together over 200 community members for food, games, and celebration."
+      description: "Our annual family festival brought together over 200 community members for food, games, and celebration.",
+      reflectionUrl: "/events/fall-festival-reflection" // Example URL
     },
     {
       title: "Walk for Life",
       date: "September 2023",
-      description: "Our inaugural Walk for Life raised over $15,000 and brought awareness to our mission throughout the community."
+      description: "Our inaugural Walk for Life raised over $15,000 and brought awareness to our mission throughout the community.",
+      reflectionUrl: null
     }
   ];
 
@@ -171,20 +174,28 @@ const Events = () => {
           </div>
         </section>
 
-        {/* Past Events */}
+        {/* Recent Events */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Recent Events</h2>
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {pastEvents.map((event, index) => (
-                  <div key={index} className="bg-gray-100 p-6 rounded-lg opacity-75">
-                    <h3 className="text-xl font-bold text-gray-600 mb-2">{event.title}</h3>
-                    <p className="text-gray-500 font-semibold mb-3">{event.date}</p>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                    <Button disabled className="bg-gray-400 text-white cursor-not-allowed w-full">
-                      Event Completed
-                    </Button>
+                {recentEvents.map((event, index) => (
+                  <div key={index} className="bg-sage-50 p-6 rounded-lg">
+                    <h3 className="text-xl font-bold text-sage-800 mb-2">{event.title}</h3>
+                    <p className="text-sage-600 font-semibold mb-3">{event.date}</p>
+                    <p className="text-sage-600 mb-4">{event.description}</p>
+                    {event.reflectionUrl ? (
+                      <a href={event.reflectionUrl} target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-gray-400 hover:bg-gray-500 text-white w-full">
+                          Event Completed
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button disabled className="bg-gray-400 text-white cursor-not-allowed w-full">
+                        Event Completed
+                      </Button>
+                    )}
                   </div>
                 ))}
               </div>
