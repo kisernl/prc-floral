@@ -27,7 +27,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/prc-gentle-bloom/">
+      {/* <BrowserRouter basename="/prc-gentle-bloom/"> */}
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
