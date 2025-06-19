@@ -12,7 +12,7 @@ const HeroSection = () => {
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-5xl lg:text-6xl font-bold text-sage-800 leading-tight">
               Supporting Families with 
-              <span className="text-rose-600 block">Love & Hope</span>
+              <span className="text-rose-600 block lg:inline"> Love & Hope</span>
             </h1>
             
             <p className="text-xl text-sage-700 leading-relaxed">

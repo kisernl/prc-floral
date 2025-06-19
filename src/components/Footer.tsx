@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-sage-800 text-sage-100">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-4 gap-8">
           {/* Organization Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">

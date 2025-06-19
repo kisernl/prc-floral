@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,13 +22,15 @@ export default {
 				'playfair': ['Playfair Display', 'serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
+			screens: {
+				'lg': '825px',
+			},
 			colors: {
 				border: 'rgb(var(--border))',
 				input: 'rgb(var(--input))',
 				ring: 'rgb(var(--ring))',
 				background: 'rgb(var(--background))',
 				foreground: 'rgb(var(--foreground))',
-				// same for all these ↓ if defined in RGB
 				primary: {
 				  DEFAULT: 'rgb(var(--primary))',
 				  foreground: 'rgb(var(--primary-foreground))'

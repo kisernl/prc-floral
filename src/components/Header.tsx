@@ -35,7 +35,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sage-700 hover:text-rose-600 transition-colors font-medium bg-transparent border-none outline-none flex items-center gap-1">
                 Who We Are
@@ -101,7 +101,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
                 <Button variant="ghost" size="icon" className="h-14 w-14 text-sage-800 hover:bg-sage-100">
