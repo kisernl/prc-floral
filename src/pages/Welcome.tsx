@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Heart, Quote } from 'lucide-react';
+import { getImagePath } from '@/lib/paths';
 
 const Welcome = () => {
   return (
@@ -26,7 +27,7 @@ const Welcome = () => {
               <div className="bg-sage-50 rounded-lg p-8 md:p-12">
                 <div className="flex items-center justify-center mb-8">
                   <img 
-                    src={`${import.meta.env.BASE_URL}/images/female_placeholder.png`} 
+                    src={getImagePath('/images/female_placeholder.png')} 
                     alt="Sarah Johnson, Executive Director"
                     className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   />
@@ -93,7 +94,7 @@ const Welcome = () => {
                       
                       <div className="mt-4">
                         <img 
-                          src={`${import.meta.env.BASE_URL}/images/signature_long.png`} 
+                          src={getImagePath('/images/signature_long.png')} 
                           alt="Sarah Johnson signature"
                           className="h-16 object-contain mb-4"
                         />

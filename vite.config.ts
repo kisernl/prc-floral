@@ -7,6 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory
   const env = loadEnv(mode, process.cwd(), '');
+  const base = mode === 'production' ? env.VITE_BASE_PATH : '/';
 
   return {
     server: {
@@ -23,6 +24,6 @@ export default defineConfig(({ mode }) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
-    base: env.VITE_BASE_PATH,
+    base: base,
   };
 });
