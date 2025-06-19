@@ -213,14 +213,14 @@ const Volunteer = () => {
               Take the first step toward becoming a volunteer. We'd love to hear from you and discuss 
               how your unique skills and passions can contribute to our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScdYMEcNFmS1Te7c1MnbEd4NI8zE1ka2awL-JjShxVwQJzlww/viewform?usp=header/" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScdYMEcNFmS1Te7c1MnbEd4NI8zE1ka2awL-JjShxVwQJzlww/viewform?usp=header/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto bg-rose-600 hover:bg-rose-700 text-white text-lg px-8 py-3">
                   Apply to Volunteer
                 </Button>
               </a>
-              <a href="tel:+2187296697">
-                <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3 flex items-center">
+              <a href="tel:+2187296697" className="w-full sm:w-auto">
+                <Button variant="outline" className="w-full sm:w-auto border-sage-300 text-sage-700 hover:bg-sage-50 text-lg px-8 py-3 flex items-center justify-center">
                   <Phone className="h-5 w-5 mr-2" />
                   Call (218) 729-6697
                 </Button>

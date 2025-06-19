@@ -108,7 +108,7 @@ const Header = () => {
                   <Menu className="h-10 w-10" />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent className="bg-white text-sage-800 border-t-sage-200 h-[90vh] max-h-[90vh] flex flex-col">
+              <DrawerContent className="bg-white text-sage-800 border-t-sage-200 h-[85vh] max-h-[85vh] flex flex-col">
                 <DrawerHeader className="border-b border-sage-200 flex-shrink-0">
                   <div className="flex items-center space-x-3">
                     <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-3">
@@ -124,7 +124,7 @@ const Header = () => {
                     </Button>
                   </DrawerClose>
                 </DrawerHeader>
-                <div className="p-6 space-y-8 overflow-y-auto flex-grow">
+                <div className="p-6 space-y-8 overflow-y-auto flex-1">
                   <div>
                     <h3 className="font-semibold text-sage-800 mb-4">Who We Are</h3>
                     <div className="pl-4 space-y-4">
@@ -150,8 +150,10 @@ const Header = () => {
                       <Link to="/blog" onClick={() => setIsOpen(false)} className="block text-sage-600 hover:text-rose-600">Blog</Link>
                     </div>
                   </div>
-                  <Link to="/donate" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white mt-8">
+                </div>
+                <div className="p-6 border-t border-sage-200 flex-shrink-0">
+                  <Link to="/donate" onClick={() => setIsOpen(false)} className="block w-full">
+                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white">
                       Donate Now
                     </Button>
                   </Link>
