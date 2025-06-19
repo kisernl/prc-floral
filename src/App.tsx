@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,6 +20,11 @@ import Welcome from "./pages/Welcome";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+// Event pages
+import AnnualHopeGala from "./pages/events/AnnualHopeGala";
+import BabyMeClasses from "./pages/events/BabyMeClasses";
+import CommunityHealthFair from "./pages/events/CommunityHealthFair";
+import VolunteerTraining from "./pages/events/VolunteerTraining";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +47,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/annual-hope-gala" element={<AnnualHopeGala />} />
+          <Route path="/events/baby-me-classes" element={<BabyMeClasses />} />
+          <Route path="/events/community-health-fair" element={<CommunityHealthFair />} />
+          <Route path="/events/volunteer-training" element={<VolunteerTraining />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/welcome" element={<Welcome />} />

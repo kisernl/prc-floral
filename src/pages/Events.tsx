@@ -1,8 +1,10 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calendar, MapPin, Clock, Users, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Events = () => {
   const upcomingEvents = [
@@ -12,15 +14,19 @@ const Events = () => {
       time: "6:00 PM - 10:00 PM",
       location: "Grand Ballroom, Downtown Hotel",
       description: "Join us for an elegant evening of dinner, entertainment, and celebration as we honor the families and volunteers who make our mission possible.",
-      type: "Fundraiser"
+      type: "Fundraiser",
+      slug: "annual-hope-gala",
+      isLive: false
     },
     {
       title: "Baby & Me Classes",
       date: "Starting March 20, 2024",
       time: "10:00 AM - 11:30 AM",
-      location: "Hope Pregnancy Center",
+      location: "Floral PRC",
       description: "Weekly classes for new parents covering infant care, development, and bonding. Registration required.",
-      type: "Educational"
+      type: "Educational",
+      slug: "baby-me-classes",
+      isLive: true
     },
     {
       title: "Community Health Fair",
@@ -28,15 +34,19 @@ const Events = () => {
       time: "9:00 AM - 3:00 PM",
       location: "City Park Pavilion",
       description: "Free health screenings, information booths, and family activities. We'll have a booth with pregnancy resources and information.",
-      type: "Community"
+      type: "Community",
+      slug: "community-health-fair",
+      isLive: true
     },
     {
       title: "Volunteer Training Session",
       date: "April 12, 2024",
       time: "6:00 PM - 8:00 PM",
-      location: "Hope Pregnancy Center",
+      location: "Floral PRC",
       description: "Orientation and training for new volunteers. Learn about our services and how you can make a difference.",
-      type: "Volunteer"
+      type: "Volunteer",
+      slug: "volunteer-training",
+      isLive: true
     }
   ];
 
@@ -105,9 +115,17 @@ const Events = () => {
                       <p className="text-sage-600 leading-relaxed">{event.description}</p>
                     </div>
                     <div className="mt-4 md:mt-0 md:ml-6">
-                      <Button className="bg-rose-600 hover:bg-rose-700 text-white">
-                        Register
-                      </Button>
+                      {event.isLive ? (
+                        <Link to={`/events/${event.slug}`}>
+                          <Button className="bg-rose-600 hover:bg-rose-700 text-white">
+                            More Info
+                          </Button>
+                        </Link>
+                      ) : (
+                        <Button disabled className="bg-gray-400 text-white cursor-not-allowed">
+                          Coming Soon
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -160,10 +178,13 @@ const Events = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {pastEvents.map((event, index) => (
-                  <div key={index} className="bg-sage-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-bold text-sage-800 mb-2">{event.title}</h3>
-                    <p className="text-rose-600 font-semibold mb-3">{event.date}</p>
-                    <p className="text-sage-600">{event.description}</p>
+                  <div key={index} className="bg-gray-100 p-6 rounded-lg opacity-75">
+                    <h3 className="text-xl font-bold text-gray-600 mb-2">{event.title}</h3>
+                    <p className="text-gray-500 font-semibold mb-3">{event.date}</p>
+                    <p className="text-gray-600 mb-4">{event.description}</p>
+                    <Button disabled className="bg-gray-400 text-white cursor-not-allowed w-full">
+                      Event Completed
+                    </Button>
                   </div>
                 ))}
               </div>
