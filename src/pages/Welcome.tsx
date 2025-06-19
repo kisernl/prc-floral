@@ -12,7 +12,7 @@ const Welcome = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-sage-50 to-rose-50 py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold text-sage-800 mb-6">Welcome to Hope Pregnancy Center</h1>
+            <h1 className="text-5xl font-bold text-sage-800 mb-6">Welcome to Floral Pregnancy Center</h1>
             <p className="text-xl text-sage-600 max-w-3xl mx-auto leading-relaxed">
               A personal message from our Executive Director
             </p>
@@ -26,7 +26,7 @@ const Welcome = () => {
               <div className="bg-sage-50 rounded-lg p-8 md:p-12">
                 <div className="flex items-center justify-center mb-8">
                   <img 
-                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" 
+                    src={`${import.meta.env.BASE_URL}/images/female_placeholder.png`} 
                     alt="Sarah Johnson, Executive Director"
                     className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
                   />
@@ -46,13 +46,13 @@ const Welcome = () => {
                       </p>
                       
                       <p className="mb-6">
-                        Welcome to Hope Pregnancy Center, where every story matters and every life is precious. 
+                        Welcome to Floral Pregnancy Center, where every story matters and every life is precious. 
                         For over 15 years, we have been a beacon of hope in our community, providing compassionate 
                         support to women and families during one of life's most significant journeys.
                       </p>
 
                       <p className="mb-6">
-                        When I first joined Hope Pregnancy Center, I was struck by the profound impact that genuine 
+                        When I first joined Floral Pregnancy Center, I was struck by the profound impact that genuine 
                         care and support can have on a person's life. Every day, I witness the transformation that 
                         occurs when someone feels truly seen, heard, and valued. Whether someone is facing an 
                         unplanned pregnancy, needs parenting resources, or simply wants a safe space to explore 
@@ -77,7 +77,7 @@ const Welcome = () => {
                       <p className="mb-6">
                         Whether you're seeking support for yourself, looking for ways to get involved in our mission, 
                         or simply want to learn more about what we do, I invite you to explore our website and 
-                        discover the many ways Hope Pregnancy Center serves our community. Together, we're not just 
+                        discover the many ways Floral Pregnancy Center serves our community. Together, we're not just 
                         changing individual lives – we're strengthening families and building a more compassionate world.
                       </p>
 
@@ -93,13 +93,13 @@ const Welcome = () => {
                       
                       <div className="mt-4">
                         <img 
-                          src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&w=300&q=80" 
+                          src={`${import.meta.env.BASE_URL}/images/signature_long.png`} 
                           alt="Sarah Johnson signature"
-                          className="h-16 object-contain"
+                          className="h-16 object-contain mb-4"
                         />
                         <p className="font-semibold text-sage-800">Sarah Johnson</p>
                         <p className="text-rose-600">Executive Director</p>
-                        <p className="text-sm text-sage-600">Hope Pregnancy Center</p>
+                        <p className="text-sm text-sage-600">Floral Pregnancy Center</p>
                       </div>
                     </div>
                   </div>

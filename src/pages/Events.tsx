@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,70 +5,125 @@ import { Calendar, MapPin, Clock, Users, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
+interface Event {
+  title: string;
+  date: string;
+  endDate?: string;
+  time?: string;
+  location?: string;
+  description: string;
+  type: string;
+  slug: string;
+  isLive: boolean;
+  reflectionUrl?: string | null;
+}
+
 const Events = () => {
-  const upcomingEvents = [
+  const allEvents: Event[] = [
     {
       title: "Annual Hope Gala",
-      date: "March 15, 2024",
+      date: "April 6, 2029",
+      endDate: null,
       time: "6:00 PM - 10:00 PM",
       location: "Grand Ballroom, Downtown Hotel",
       description: "Join us for an elegant evening of dinner, entertainment, and celebration as we honor the families and volunteers who make our mission possible.",
       type: "Fundraiser",
       slug: "annual-hope-gala",
-      isLive: false
+      isLive: false,
+      reflectionUrl: null
     },
     {
       title: "Baby & Me Classes",
-      date: "Starting March 20, 2024",
+      date: "March 20, 2029",
+      endDate: "May 1, 2029",
       time: "10:00 AM - 11:30 AM",
       location: "Floral PRC",
       description: "Weekly classes for new parents covering infant care, development, and bonding. Registration required.",
       type: "Educational",
       slug: "baby-me-classes",
-      isLive: true
+      isLive: true,
+      reflectionUrl: null
     },
     {
       title: "Community Health Fair",
-      date: "April 6, 2024",
+      date: "July 6, 2029",
       time: "9:00 AM - 3:00 PM",
       location: "City Park Pavilion",
       description: "Free health screenings, information booths, and family activities. We'll have a booth with pregnancy resources and information.",
       type: "Community",
       slug: "community-health-fair",
-      isLive: true
+      isLive: true,
+      reflectionUrl: null
     },
     {
       title: "Volunteer Training Session",
-      date: "April 12, 2024",
+      date: "April 12, 2029",
       time: "6:00 PM - 8:00 PM",
       location: "Floral PRC",
       description: "Orientation and training for new volunteers. Learn about our services and how you can make a difference.",
       type: "Volunteer",
       slug: "volunteer-training",
-      isLive: true
-    }
-  ];
-
-  const recentEvents = [
+      isLive: true,
+      reflectionUrl: null
+    },
     {
       title: "Holiday Gift Drive",
-      date: "December 2023",
+      date: "December 15, 2024",
+      time: "9:00 AM - 5:00 PM",
+      location: "Floral PRC",
       description: "Thanks to our amazing community, we collected over 500 gifts for families in need during the holiday season.",
-      reflectionUrl: null // Could be a URL to photos/reflection post
+      type: "Community",
+      slug: "holiday-gift-drive-2024",
+      isLive: false,
+      reflectionUrl: null
     },
     {
       title: "Fall Family Festival",
-      date: "October 2023",
+      date: "October 21, 2024",
+      time: "11:00 AM - 3:00 PM",
+      location: "City Park",
       description: "Our annual family festival brought together over 200 community members for food, games, and celebration.",
-      reflectionUrl: "/events/fall-festival-reflection" // Example URL
+      type: "Community",
+      slug: "fall-festival-2024",
+      isLive: false,
+      reflectionUrl: "https://floralprc.substack.com/p/fall-festival-reflection"
     },
     {
       title: "Walk for Life",
-      date: "September 2023",
+      date: "September 9, 2024",
+      time: "8:00 AM - 12:00 PM",
+      location: "Riverside Park",
       description: "Our inaugural Walk for Life raised over $15,000 and brought awareness to our mission throughout the community.",
+      type: "Fundraiser",
+      slug: "walk-for-life-2024",
+      isLive: false,
       reflectionUrl: null
     }
   ];
+
+  // Sort events by date (newest first for past events, soonest first for upcoming)
+  const sortedEvents = [...allEvents].sort((a, b) => 
+    new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Categorize events
+  const upcomingEvents = sortedEvents
+    .filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate >= today;
+    });
+
+  // Get past events (excluding today) and take the 3 most recent
+  const recentEvents = [...sortedEvents]
+    .reverse() // Reverse to get newest first for past events
+    .filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate < today;
+    })
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen">
@@ -105,6 +159,7 @@ const Events = () => {
                         <div className="flex items-center text-sage-600">
                           <Calendar className="h-4 w-4 mr-2" />
                           {event.date}
+                          {event.endDate && ` - ${event.endDate}`}
                         </div>
                         <div className="flex items-center text-sage-600">
                           <Clock className="h-4 w-4 mr-2" />
@@ -183,19 +238,17 @@ const Events = () => {
                 {recentEvents.map((event, index) => (
                   <div key={index} className="bg-sage-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-sage-800 mb-2">{event.title}</h3>
-                    <p className="text-sage-600 font-semibold mb-3">{event.date}</p>
+                    <p className="text-sage-600 font-semibold mb-3">{event.date}
+                      {event.endDate && ` - ${event.endDate}`}
+                    </p>
                     <p className="text-sage-600 mb-4">{event.description}</p>
                     {event.reflectionUrl ? (
                       <a href={event.reflectionUrl} target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-gray-400 hover:bg-gray-500 text-white w-full">
-                          Event Completed
+                        <Button className="bg-rose-600 hover:bg-rose-700 text-white w-full">
+                          Reflections
                         </Button>
                       </a>
-                    ) : (
-                      <Button disabled className="bg-gray-400 text-white cursor-not-allowed w-full">
-                        Event Completed
-                      </Button>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>

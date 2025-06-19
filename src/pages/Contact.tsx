@@ -38,7 +38,7 @@ const Contact = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Get in Touch</h2>
+              {/* <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Get in Touch</h2> */}
               
               <div className="grid lg:grid-cols-2 gap-12 mb-16">
                 {/* Left Column - All Contact Details and Connect */}
