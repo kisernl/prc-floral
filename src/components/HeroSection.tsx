@@ -58,7 +58,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-sage-200">
               <img 
-                src="/images/mom_baby_1.png" 
+                src={`${import.meta.env.BASE_URL}/images/mom_baby_1.png`} 
                 alt="mom and baby"
                 className="w-full h-80 object-cover rounded-xl"
               />
