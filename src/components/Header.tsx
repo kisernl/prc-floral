@@ -151,7 +151,7 @@ const Header = () => {
                     </div>
                   </div>
                   <Link to="/donate" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white mt-8 mb-4">
+                    <Button className="w-full bg-rose-600 hover:bg-rose-700 text-white mt-8">
                       Donate Now
                     </Button>
                   </Link>
