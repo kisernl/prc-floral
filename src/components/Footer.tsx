@@ -131,7 +131,7 @@ const Footer = () => {
             <div className="space-y-2 mt-4">
               <p className="text-sm text-sage-300">Keep up with our latest news and updates</p>
               <a 
-                href="https://floralprc.substack.com/"
+                href="https://coffeeandcrumbs.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-2 bg-rose-600 text-white text-sm font-medium rounded-lg hover:bg-rose-700 transition-colors whitespace-nowrap"

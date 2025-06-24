@@ -10,19 +10,19 @@ const TestimonialsSection = () => {
       name: "Sarah M.",
       role: "New Mother",
       content: "Hope Pregnancy Center was there for me when I felt most alone. Their compassionate staff provided not just resources, but genuine care and support throughout my entire pregnancy journey.",
-      rating: 5
+      substackUrl: "https://prcfloral.substack.com/"
     },
     {
       name: "Jennifer & David",
       role: "Grateful Parents",
       content: "The parenting classes and ongoing support we received helped us feel confident and prepared. We can't thank the team enough for walking alongside us during this beautiful journey.",
-      rating: 5
+      substackUrl: "https://prcfloral.substack.com/"
     },
     {
       name: "Maria L.",
       role: "Community Member",
       content: "As a volunteer, I've witnessed firsthand the incredible impact this organization has on families. The love and dedication of the staff truly makes a difference in our community.",
-      rating: 5
+      substackUrl: "https://prcfloral.substack.com/"
     }
   ];
 
@@ -45,11 +45,11 @@ const TestimonialsSection = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   <Quote className="h-8 w-8 text-rose-300 mr-3" />
-                  <div className="flex space-x-1">
+                  {/* <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-rose-400 text-rose-400" />
                     ))}
-                  </div>
+                  </div> */}
                 </div>
                 
                 <p className="text-sage-700 mb-6 leading-relaxed italic">

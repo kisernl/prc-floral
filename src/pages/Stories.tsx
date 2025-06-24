@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,22 +7,25 @@ import { Link } from 'react-router-dom';
 const Stories = () => {
   const stories = [
     {
-      name: "Sarah M.",
-      title: "A Mother's Journey",
-      excerpt: "When I first came to Floral PRC, I was scared and didn't know what to do. The staff welcomed me with open arms and helped me understand all my options.",
-      story: "I was 19 and pregnant, feeling completely overwhelmed. The counselors at Floral PRC didn't judge me - they just listened and provided the support I needed. Today, my daughter is 5 years old and thriving. I can't imagine my life without her, and I'm so grateful for the guidance I received during those uncertain times."
+      name: "Karen M.",
+      title: <span>Sample Story <span className="text-sm">(from COFFEE + CRUMBS)</span></span>,
+      excerpt: "When I’m gone and all that’s left of me are portraits, recipes, and memories, I hope my boys remember me the same way I’m learning to remember my dad.",
+      story: `“You have to have the streusel topping or it isn’t banana bread,” my dad always said when talking about his favorite recipe.He stood tall when he entered the kitchen, usually dressed in orange and black, his penchant for representing his alma mater apparent from the holes in his t-shirts. He even convinced my mom to remodel the kitchen in Oregon State University colors too...`,
+      storyUrl: "https://coffeeandcrumbs.substack.com/p/remember-me"
     },
     {
       name: "Maria L.",
       title: "Finding Strength",
       excerpt: "The parenting classes at Floral PRC gave me the confidence I needed to be the mother I wanted to be.",
-      story: "As a first-time mom, I had so many questions and fears. The parenting classes taught me everything from how to change a diaper to understanding my baby's development. The other moms in the class became my support system, and we still meet regularly. Floral PRC didn't just help me during pregnancy - they helped me become a confident parent."
+      story: "As a first-time mom, I had so many questions and fears. The parenting classes taught me everything from how to change a diaper to understanding my baby's development. The other moms in the class became my support system, and we still meet regularly. Floral PRC didn't just help me during pregnancy - they helped me become a confident parent.",
+      storyUrl: "https://coffeeandcrumbs.substack.com/p/remember-me"
     },
     {
       name: "Jennifer K.",
       title: "A Second Chance",
       excerpt: "After a difficult first pregnancy, Floral PRC helped me navigate my second pregnancy with hope and confidence.",
-      story: "My first pregnancy ended in loss, and when I became pregnant again, I was filled with anxiety. The counselors at Floral PRC understood my fears and provided the emotional support I needed. They connected me with other women who had similar experiences, and together we found healing. My son is now 2 years old, and I volunteer at the center to help other women who are walking similar paths."
+      story: "My first pregnancy ended in loss, and when I became pregnant again, I was filled with anxiety. The counselors at Floral PRC understood my fears and provided the emotional support I needed. They connected me with other women who had similar experiences, and together we found healing. My son is now 2 years old, and I volunteer at the center to help other women who are walking similar paths.",
+      storyUrl: "https://coffeeandcrumbs.substack.com/p/remember-me"
     }
   ];
 
@@ -47,7 +49,7 @@ const Stories = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-16">
               {stories.map((story, index) => (
-                <div key={index} className="bg-sage-50 rounded-lg p-8 md:p-12">
+                <div key={index} className="bg-sage-50 rounded-lg p-8 md:p-12 relative">
                   <div className="flex items-start space-x-4 mb-6">
                     <Quote className="h-8 w-8 text-rose-500 flex-shrink-0 mt-1" />
                     <div>
@@ -58,11 +60,35 @@ const Stories = () => {
                   <blockquote className="text-sage-700 text-lg leading-relaxed italic mb-6">
                     "{story.excerpt}"
                   </blockquote>
-                  <p className="text-sage-600 leading-relaxed">
+                  <p className="text-sage-600 leading-relaxed mb-4">
                     {story.story}
                   </p>
+                  <div className="text-right absolute bottom-8 right-8">
+                    <a 
+                      href={story.storyUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-rose-600 hover:text-rose-700 font-medium transition-colors"
+                    >
+                      Read more
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <a 
+                href="https://coffeeandcrumbs.substack.com/t/essays" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-rose-100 hover:bg-rose-200 text-rose-600 font-semibold py-3 px-8 rounded-lg transition-colors"
+              >
+                More Stories
+              </a>
             </div>
           </div>
         </section>

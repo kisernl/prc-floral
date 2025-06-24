@@ -91,7 +91,7 @@ const Blog = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a 
-                      href="https://floralprc.substack.com/" 
+                      href="https://coffeeandcrumbs.substack.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center"

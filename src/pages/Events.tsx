@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 interface Event {
-  title: string;
+  title: string | React.ReactNode;
   date: string;
   endDate?: string;
   time?: string;
@@ -78,15 +78,15 @@ const Events = () => {
       reflectionUrl: null
     },
     {
-      title: "Fall Family Festival",
-      date: "October 21, 2024",
+      title: <span>Sample Event <span className="text-sm">(from C+C)</span></span>,
+      date: "December 21, 2024",
       time: "11:00 AM - 3:00 PM",
-      location: "City Park",
-      description: "Our annual family festival brought together over 200 community members for food, games, and celebration.",
+      location: "Anoka, MN",
+      description: "This is a sample event. BUT, do checkout the beautiful photo essay by Jennifer Floyd linked below.",
       type: "Community",
-      slug: "fall-festival-2024",
+      slug: "sample-event-2024",
       isLive: false,
-      reflectionUrl: "https://floralprc.substack.com/p/fall-festival-reflection"
+      reflectionUrl: "https://coffeeandcrumbs.substack.com/p/become-a-child-at-christmas"
     },
     {
       title: "Walk for Life",
@@ -264,7 +264,7 @@ const Events = () => {
               Subscribe to our newsletter to be the first to know about upcoming events, volunteer opportunities, and ways to get involved.
             </p>
             <a 
-              href="https://floralprc.substack.com/" 
+              href="https://coffeeandcrumbs.substack.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"
