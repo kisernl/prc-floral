@@ -106,46 +106,59 @@ const Donate = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-sage-800 text-center mb-12">Other Ways to Give</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-200">
-                <Gift className="h-16 w-16 text-rose-500 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-sage-800 mb-4">In-Kind Donations</h3>
-                <p className="text-sage-600 mb-6">
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-lg text-center shadow-md border border-sage-200">
+                <Gift className="h-14 w-14 text-rose-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-sage-800 mb-3">In-Kind Donations</h3>
+                <p className="text-sage-600 mb-5 text-sm">
                   Donate baby supplies, maternity clothes, or other essential items that directly benefit our clients.
                 </p>
-                  <a 
+                <a 
                   href="https://docs.google.com/document/d/19RTz-6xXMMpmraCIj52KCQ2l6T53a7pDdMRgFJ-G6Zk/edit?usp=sharingk" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  >
-                    <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
-                      View Wish List
-                    </Button>
+                >
+                  <Button variant="outline" size="sm" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-sm">
+                    View Wish List
+                  </Button>
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-200">
-                <Users className="h-16 w-16 text-rose-500 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-sage-800 mb-4">Volunteer</h3>
-                <p className="text-sage-600 mb-6">
+              <div className="bg-white p-6 rounded-lg text-center shadow-md border border-sage-200">
+                <Users className="h-14 w-14 text-rose-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-sage-800 mb-3">Volunteer</h3>
+                <p className="text-sage-600 mb-5 text-sm">
                   Give your time and talents to support our mission. We have opportunities for every skill set and schedule.
                 </p>
                 <Link to="/volunteer">
-                  <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                  <Button variant="outline" size="sm" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-sm">
                     Learn More
                   </Button>
                 </Link>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center shadow-md border border-sage-200">
-                <Star className="h-16 w-16 text-rose-500 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-sage-800 mb-4">Fundraise</h3>
-                <p className="text-sage-600 mb-6">
+              <div className="bg-white p-6 rounded-lg text-center shadow-md border border-sage-200">
+                <Star className="h-14 w-14 text-rose-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-sage-800 mb-3">Fundraise</h3>
+                <p className="text-sage-600 mb-5 text-sm">
                   Organize a fundraising event in your community or start a peer-to-peer campaign to support our work.
                 </p>
                 <Link to="/contact">
-                  <Button variant="outline" className="border-sage-300 text-sage-700 hover:bg-sage-50">
+                  <Button variant="outline" size="sm" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-sm">
                     Contact Us
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg text-center shadow-md border border-sage-200">
+                <Heart className="h-14 w-14 text-rose-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-sage-800 mb-3">Legacy Giving</h3>
+                <p className="text-sage-600 mb-5 text-sm">
+                  Leave a lasting impact by including us in your will, trust, or as a beneficiary. We also welcome gifts of stock/other assets.
+                </p>
+                <Link to="/contact">
+                  <Button variant="outline" size="sm" className="border-sage-300 text-sage-700 hover:bg-sage-50 text-sm">
+                    Learn More
                   </Button>
                 </Link>
               </div>
